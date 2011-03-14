@@ -32,3 +32,11 @@ function pronamic_framework_wp_head() {
 }
 
 add_action('wp_head', 'pronamic_framework_wp_head');
+
+function pronamic_admin_footer_text($text) {
+	$text .= ' | ' . __('Concept en realisatie door <a href="http://pronamic.nl/">Pronamic</a>');
+
+	return $text;
+}
+
+add_filter('admin_footer_text', 'pronamic_admin_footer_text');
