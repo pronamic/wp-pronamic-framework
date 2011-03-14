@@ -31,6 +31,14 @@ WordPress installation and then activate the Plugin from Plugins page.
 *	Initial release
 
 
+== ToDo ==
+
+*	HTML developer comments
+*	HTML developer meta tag
+*	Copyright functions pronamic_link();
+*	RSS feed on dashboard
+
+
 == Links ==
 
 *	[Pronamic](http://pronamic.eu/)
