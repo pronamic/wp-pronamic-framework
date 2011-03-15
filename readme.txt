@@ -37,6 +37,15 @@ WordPress installation and then activate the Plugin from Plugins page.
 *	HTML developer meta tag
 *	Copyright functions pronamic_link();
 *	RSS feed on dashboard
+*	List of Pronamic plugins
+*	E-mailaddress support@pronamic.nl
+*	Help texts
+*	Default ad sizes widgets
+*	Pronamic Shop
+*	Openprovider
+*	Mailtomail
+*	Twinfield
+*	Flickr Sync
 
 
 == Links ==
