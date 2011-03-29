@@ -1,0 +1,193 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Pronamic Framework\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-03-29 17:02+0100\n"
+"PO-Revision-Date: 2011-03-29 17:02+0100\n"
+"Last-Translator: Remco Tolsma <remco@pronamic.nl>\n"
+"Language-Team: Pronamic <info@pronamic.nl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: W:\\rt\\httpdocs\\wp-content\\plugins\\pronamic-framework\n"
+"X-Poedit-Language: Dutch\n"
+"X-Poedit-Country: NETHERLANDS\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: pronamic-framework.php:77
+#: pronamic-framework.php:124
+#: pronamic-framework.php:154
+#: pronamic-framework.php:221
+msgid "Pronamic"
+msgstr "Pronamic"
+
+#: pronamic-framework.php:78
+#: pronamic-framework.php:103
+#: pronamic-framework.php:111
+#: pronamic-framework.php:152
+#: pronamic-framework.php:222
+msgid "http://pronamic.eu/"
+msgstr "http://pronamic.nl/"
+
+#: pronamic-framework.php:85
+msgid "Contact"
+msgstr "Contact"
+
+#: pronamic-framework.php:86
+msgid "http://pronamic.eu/contact/"
+msgstr "http://pronamic.nl/contact/"
+
+#: pronamic-framework.php:98
+msgid "Support"
+msgstr "Support"
+
+#: pronamic-framework.php:101
+#, php-format
+msgid "Telephone: %s"
+msgstr "Telefoon: %s"
+
+#: pronamic-framework.php:101
+msgid "+31 516 481 200"
+msgstr "0516 481 200"
+
+#: pronamic-framework.php:102
+#, php-format
+msgid "E-mail: %s"
+msgstr "E-mail: %s"
+
+#: pronamic-framework.php:102
+msgid "support@pronamic.eu"
+msgstr "support@pronamic.nl"
+
+#: pronamic-framework.php:103
+#, php-format
+msgid "Website: %s"
+msgstr "Website: %s"
+
+#: pronamic-framework.php:106
+msgid "News"
+msgstr "Nieuws"
+
+#: pronamic-framework.php:113
+msgid "Pronamic News"
+msgstr "Pronamic nieuws"
+
+#: pronamic-framework.php:150
+#, php-format
+msgid "Concept and realisation by %s"
+msgstr "Concept en realisatie door %s"
+
+#: pronamic-framework.php:153
+msgid "Pronamic - Internet, marketing & WordPress specialist"
+msgstr "Pronamic - Internet, marketing & WordPress specialist"
+
+#~ msgid "T: %s"
+#~ msgstr "T: %s"
+
+#~ msgid "Title"
+#~ msgstr "Titel"
+
+#~ msgid "Description"
+#~ msgstr "Beschrijving"
+
+#~ msgid "Latitude"
+#~ msgstr "Breedtegraad"
+
+#~ msgid "Longitude"
+#~ msgstr "Lengtegraad"
+
+#~ msgid "Width"
+#~ msgstr "Breedte"
+
+#~ msgid "Height"
+#~ msgstr "Hoogte"
+
+#~ msgid "Static"
+#~ msgstr "Statisch"
+
+#~ msgid "Active"
+#~ msgstr "Actief"
+
+#~ msgid "Show Google Maps"
+#~ msgstr "Google Maps weergeven"
+
+#~ msgid "Search"
+#~ msgstr "Zoeken"
+
+#~ msgid "Configuration - Pronamic Google Maps"
+#~ msgstr "Configuratie - Pronamic Google Maps"
+
+#~ msgid "Post type"
+#~ msgstr "Bericht type"
+
+#~ msgid "Activate Google Maps"
+#~ msgstr "Activeer Google Maps"
+
+#~ msgid "Use this widget to add an Google Maps as a widget."
+#~ msgstr "Gebruik deze widget om Google Maps toe te voegen."
+
+#~ msgid "Google Maps"
+#~ msgstr "Google Maps"
+
+#~ msgid "pixels"
+#~ msgstr "pixels"
+
+#~ msgid "percent"
+#~ msgstr "procent"
+
+#~ msgid "Settings"
+#~ msgstr "Instellingen"
+
+#~ msgid "Pronamic Google Maps"
+#~ msgstr "Pronamic Google Maps"
+
+#~ msgid "Click to toggle"
+#~ msgstr "Klik om te wisselen"
+
+#~ msgid "Donate $10, $20 or $50!"
+#~ msgstr "Doneer $10, $20 of $50!"
+
+#~ msgid ""
+#~ "This plugin has cost us countless hours of work, if you use it, please "
+#~ "donate a token of your appreciation!"
+#~ msgstr ""
+#~ "Het ons veel uren werken gekost om deze plugin te ontwikkelen, als je het "
+#~ "gebruikt, doneer a.u.b. voor je waardering!"
+
+#~ msgid "Latest news from Pronamic"
+#~ msgstr "Laatste nieuws van Pronamic"
+
+#~ msgid "no news items, feed might be broken..."
+#~ msgstr "geen nieuws items, feed is waarschijnlijk niet bereikbaar..."
+
+#~ msgid "Subscribe with RSS"
+#~ msgstr "Aanmelden voor RSS"
+
+#~ msgid "Subscribe by e-mail"
+#~ msgstr "Aanmelden via e-mail"
+
+#~ msgid "Like this plugin?"
+#~ msgstr "Vind je deze plugin leuk?"
+
+#~ msgid "Why not do any or all of the following:"
+#~ msgstr "Waarom doe je niet één van de volgende dingen:"
+
+#~ msgid "Link to it so other folks can find out about it."
+#~ msgstr "Link naar ons zodat anderen deze plugin ook ontdekken."
+
+#~ msgid "Give it a good rating on WordPress.org."
+#~ msgstr "Geef het een goede score op WordPress.org."
+
+#~ msgid "Let other people know that it works with your WordPress setup."
+#~ msgstr "Laat anderen weten dat het werk op je WordPress installatie."
+
+#~ msgid "Save Changes"
+#~ msgstr "Wijzigingen opslaan"
+
+#~ msgid "Found a bug?"
+#~ msgstr "Bug gevonden?"
+
+#~ msgid "Configuration"
+#~ msgstr "Configuratie"
