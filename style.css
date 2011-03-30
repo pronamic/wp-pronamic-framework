@@ -1,0 +1,13 @@
+#pronamic-credits a {
+    background: url("pronamic-gray-16x16.png") no-repeat scroll left center transparent;
+
+    color: #666666;
+
+    display: inline-block;
+
+    line-height: 16px;
+
+    padding-left: 20px;
+
+    text-decoration: none;
+}
