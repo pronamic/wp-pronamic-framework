@@ -149,8 +149,8 @@ class Pronamic_Framework {
 		return sprintf('<span id="pronamic-credits">%s</span>', 
 			sprintf(__('Concept and realisation by %s', self::SLUG) ,
 				sprintf('<a href="%s" title="%s" rel="developer">%s</a>' , 
-					__('http://pronamic.eu/', self::SLUG) , 
-					__('Pronamic - Internet, marketing & WordPress specialist', self::SLUG) ,
+					esc_attr(__('http://pronamic.eu/', self::SLUG)) , 
+					esc_attr(__('Pronamic - Internet, marketing & WordPress specialist', self::SLUG)) ,
 					__('Pronamic', self::SLUG)
 				)
 			)

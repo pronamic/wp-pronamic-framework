@@ -27,6 +27,9 @@ WordPress installation and then activate the Plugin from Plugins page.
 
 == Changelog ==
 
+= 1.1.2 =
+*	Added esc_attr() function to some code
+
 = 1.1.1 =
 *	Fixed a bug with an unclosed span element
 
