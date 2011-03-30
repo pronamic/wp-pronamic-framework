@@ -146,7 +146,7 @@ class Pronamic_Framework {
 	 * @return string
 	 */
 	public static function getCredits() {
-		return sprintf('<span id="pronamic-credits">%s</span', 
+		return sprintf('<span id="pronamic-credits">%s</span>', 
 			sprintf(__('Concept and realisation by %s', self::SLUG) ,
 				sprintf('<a href="%s" title="%s" rel="developer">%s</a>' , 
 					__('http://pronamic.eu/', self::SLUG) , 
@@ -205,21 +205,18 @@ class Pronamic_Framework {
 		// Thanks to http://patorjk.com/software/taag/
 	
 		?>
-		<!-- 
-	
-		Developed by:
-		Pronamic | http://pronamic.nl/ | info@pronamic.nl | <?php echo date('Y'); ?> 
-		 _____                                  _      
-		|  __ \                                (_)     
-		| |__) |_ __ ___  _ __   __ _ _ __ ___  _  ___ 
-		|  ___/| '__/ _ \| '_ \ / _` | '_ ` _ \| |/ __|
-		| |    | | | (_) | | | | (_| | | | | | | | (__ 
-		|_|    |_|  \___/|_| |_|\__,_|_| |_| |_|_|\___|
-	
-	 	-->
 
 		<meta name="developer" content="<?php _e('Pronamic', self::SLUG); ?>" />
 		<meta name="developer-website" content="<?php _e('http://pronamic.eu/', self::SLUG); ?>" />
+
+		<!-- 
+	
+		<?php _e('Developed by:', self::SLUG); ?> 
+		<?php _e('Pronamic - Internet, marketing & WordPress specialist', self::SLUG); ?> 
+		<?php _e('http://pronamic.eu/', self::SLUG); ?> | <?php _e('info@pronamic.eu', self::SLUG); ?> 
+	
+	 	-->
+
 		<?php
 	}
 }
