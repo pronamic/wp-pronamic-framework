@@ -3,7 +3,7 @@ Contributors: pronamic, remcotolsma
 Tags: pronamic, framework
 Requires at least: 3.0
 Tested up to: 3.0
-Stable tag: 1.0
+Stable tag: 1.1
 
 This plugin contains some handy WordPress functions and extends the WordPress admin 
 interface with some nice functions, widgets and more.
@@ -26,6 +26,13 @@ WordPress installation and then activate the Plugin from Plugins page.
 
 
 == Changelog ==
+
+= 1.1 =
+*	Added dashboard widget
+*	Added multilanguage support (English and Dutch)
+*	Added admin bar menu links
+*	Added "pronamic_credits" action
+*	Added "X-Powered-By" header
 
 = 1.0 =
 *	Initial release
