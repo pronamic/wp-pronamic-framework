@@ -11,7 +11,23 @@ interface with some nice functions, widgets and more.
 
 == Description ==
 
-...
+= Query to display block =
+
+	<?php
+
+	$query = new WP_Query();
+	$query->query(array(
+		'post_type' => 'pronamic_block' , 
+		'post_name' => 'contact'
+	));
+
+	while($query->have_posts()) {
+		$query->the_post();
+
+		the_content();
+	}
+
+	?>
 
 
 == Installation ==
