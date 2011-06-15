@@ -2,7 +2,7 @@
 Contributors: pronamic, remcotolsma 
 Tags: pronamic, framework
 Requires at least: 3.0
-Tested up to: 3.0
+Tested up to: 3.2
 Stable tag: 1.2
 
 This plugin contains some handy WordPress functions and extends the WordPress admin 
