@@ -3,7 +3,7 @@ Contributors: pronamic, remcotolsma
 Tags: pronamic, framework
 Requires at least: 3.0
 Tested up to: 3.0
-Stable tag: 1.1.1
+Stable tag: 1.2
 
 This plugin contains some handy WordPress functions and extends the WordPress admin 
 interface with some nice functions, widgets and more.
@@ -27,6 +27,9 @@ WordPress installation and then activate the Plugin from Plugins page.
 
 == Changelog ==
 
+= 1.2 =
+*	Added custom post type "pronamic_block"
+
 = 1.1.2 =
 *	Added esc_attr() function to some code
 
@@ -46,10 +49,6 @@ WordPress installation and then activate the Plugin from Plugins page.
 
 == ToDo ==
 
-*	HTML developer comments
-*	HTML developer meta tag
-*	Copyright functions pronamic_link();
-*	RSS feed on dashboard
 *	List of Pronamic plugins
 *	E-mailaddress support@pronamic.nl
 *	Help texts
