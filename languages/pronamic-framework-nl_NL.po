@@ -1,0 +1,247 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Pronamic Framework\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-06-15 08:52+0100\n"
+"PO-Revision-Date: 2011-06-15 08:52+0100\n"
+"Last-Translator: Remco Tolsma <remco@pronamic.nl>\n"
+"Language-Team: Pronamic <info@pronamic.nl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;__ngettext:1,2;__withdesc;_ewithdesc;_c;_n_noop:1,2;__ngettext_noop:1,2;_x:2c,1;_nc:1,2;esc_attr_e;esc_html_e;esc_attr__;_nx:4c,1,2;_nx_noop:4c,1,2;esc_html_x:2c,1;esc_html__;_ex:2c,1\n"
+"X-Poedit-Basepath: W:\\rt\\httpdocs\\wp-content\\plugins\\pronamic-framework\n"
+"X-Poedit-Language: Dutch\n"
+"X-Poedit-Country: NETHERLANDS\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: pronamic-framework.php:78
+msgctxt "post type general name"
+msgid "Blocks"
+msgstr "Blokken"
+
+#: pronamic-framework.php:79
+msgctxt "post type singular name"
+msgid "Block"
+msgstr "Blok"
+
+#: pronamic-framework.php:80
+msgctxt "block"
+msgid "Add New"
+msgstr "Nieuw blok"
+
+#: pronamic-framework.php:81
+msgid "Add New Block"
+msgstr "Nieuw blok toevoegen"
+
+#: pronamic-framework.php:82
+msgid "Edit Block"
+msgstr "Blok wijzigen"
+
+#: pronamic-framework.php:83
+msgid "New Block"
+msgstr "Nieuw blok"
+
+#: pronamic-framework.php:84
+msgid "View Block"
+msgstr "Bekijk blok"
+
+#: pronamic-framework.php:85
+msgid "Search Blocks"
+msgstr "Blokken zoeken"
+
+#: pronamic-framework.php:86
+msgid "No blocks found"
+msgstr "Geen blokken gevonden"
+
+#: pronamic-framework.php:87
+msgid "No blocks found in Trash"
+msgstr "Geen blokken gevonden in prullenbak"
+
+#: pronamic-framework.php:88
+msgid "Parent Block:"
+msgstr "Bovenliggende blok:"
+
+#: pronamic-framework.php:89
+msgid "Blocks"
+msgstr "Blokken"
+
+#: pronamic-framework.php:116
+#: pronamic-framework.php:163
+#: pronamic-framework.php:193
+#: pronamic-framework.php:243
+msgid "Pronamic"
+msgstr "Pronamic"
+
+#: pronamic-framework.php:117
+#: pronamic-framework.php:142
+#: pronamic-framework.php:150
+#: pronamic-framework.php:191
+#: pronamic-framework.php:244
+msgid "http://pronamic.eu/"
+msgstr "http://pronamic.nl/"
+
+#: pronamic-framework.php:124
+msgid "Contact"
+msgstr "Contact"
+
+#: pronamic-framework.php:125
+msgid "http://pronamic.eu/contact/"
+msgstr "http://pronamic.nl/contact/"
+
+#: pronamic-framework.php:137
+msgid "Support"
+msgstr "Support"
+
+#: pronamic-framework.php:140
+#, php-format
+msgid "Telephone: %s"
+msgstr "Telefoon: %s"
+
+#: pronamic-framework.php:140
+msgid "+31 516 481 200"
+msgstr "0516 481 200"
+
+#: pronamic-framework.php:141
+#, php-format
+msgid "E-mail: %s"
+msgstr "E-mail: %s"
+
+#: pronamic-framework.php:141
+msgid "support@pronamic.eu"
+msgstr "support@pronamic.nl"
+
+#: pronamic-framework.php:142
+#, php-format
+msgid "Website: %s"
+msgstr "Website: %s"
+
+#: pronamic-framework.php:145
+msgid "News"
+msgstr "Nieuws"
+
+#: pronamic-framework.php:152
+msgid "Pronamic News"
+msgstr "Pronamic nieuws"
+
+#: pronamic-framework.php:189
+#, php-format
+msgid "Concept and realisation by %s"
+msgstr "Concept en realisatie door %s"
+
+#: pronamic-framework.php:192
+msgid "Pronamic - Internet, marketing & WordPress specialist"
+msgstr "Pronamic - Internet, marketing & WordPress specialist"
+
+#~ msgid "Developed by:"
+#~ msgstr "Ontwikkeld door:"
+
+#~ msgid "info@pronamic.eu"
+#~ msgstr "info@pronamic.nl"
+
+#~ msgid "T: %s"
+#~ msgstr "T: %s"
+
+#~ msgid "Title"
+#~ msgstr "Titel"
+
+#~ msgid "Description"
+#~ msgstr "Beschrijving"
+
+#~ msgid "Latitude"
+#~ msgstr "Breedtegraad"
+
+#~ msgid "Longitude"
+#~ msgstr "Lengtegraad"
+
+#~ msgid "Width"
+#~ msgstr "Breedte"
+
+#~ msgid "Height"
+#~ msgstr "Hoogte"
+
+#~ msgid "Static"
+#~ msgstr "Statisch"
+
+#~ msgid "Active"
+#~ msgstr "Actief"
+
+#~ msgid "Show Google Maps"
+#~ msgstr "Google Maps weergeven"
+
+#~ msgid "Configuration - Pronamic Google Maps"
+#~ msgstr "Configuratie - Pronamic Google Maps"
+
+#~ msgid "Post type"
+#~ msgstr "Bericht type"
+
+#~ msgid "Activate Google Maps"
+#~ msgstr "Activeer Google Maps"
+
+#~ msgid "Use this widget to add an Google Maps as a widget."
+#~ msgstr "Gebruik deze widget om Google Maps toe te voegen."
+
+#~ msgid "Google Maps"
+#~ msgstr "Google Maps"
+
+#~ msgid "pixels"
+#~ msgstr "pixels"
+
+#~ msgid "percent"
+#~ msgstr "procent"
+
+#~ msgid "Settings"
+#~ msgstr "Instellingen"
+
+#~ msgid "Pronamic Google Maps"
+#~ msgstr "Pronamic Google Maps"
+
+#~ msgid "Click to toggle"
+#~ msgstr "Klik om te wisselen"
+
+#~ msgid "Donate $10, $20 or $50!"
+#~ msgstr "Doneer $10, $20 of $50!"
+
+#~ msgid ""
+#~ "This plugin has cost us countless hours of work, if you use it, please "
+#~ "donate a token of your appreciation!"
+#~ msgstr ""
+#~ "Het ons veel uren werken gekost om deze plugin te ontwikkelen, als je het "
+#~ "gebruikt, doneer a.u.b. voor je waardering!"
+
+#~ msgid "Latest news from Pronamic"
+#~ msgstr "Laatste nieuws van Pronamic"
+
+#~ msgid "no news items, feed might be broken..."
+#~ msgstr "geen nieuws items, feed is waarschijnlijk niet bereikbaar..."
+
+#~ msgid "Subscribe with RSS"
+#~ msgstr "Aanmelden voor RSS"
+
+#~ msgid "Subscribe by e-mail"
+#~ msgstr "Aanmelden via e-mail"
+
+#~ msgid "Like this plugin?"
+#~ msgstr "Vind je deze plugin leuk?"
+
+#~ msgid "Why not do any or all of the following:"
+#~ msgstr "Waarom doe je niet één van de volgende dingen:"
+
+#~ msgid "Link to it so other folks can find out about it."
+#~ msgstr "Link naar ons zodat anderen deze plugin ook ontdekken."
+
+#~ msgid "Give it a good rating on WordPress.org."
+#~ msgstr "Geef het een goede score op WordPress.org."
+
+#~ msgid "Let other people know that it works with your WordPress setup."
+#~ msgstr "Laat anderen weten dat het werk op je WordPress installatie."
+
+#~ msgid "Save Changes"
+#~ msgstr "Wijzigingen opslaan"
+
+#~ msgid "Found a bug?"
+#~ msgstr "Bug gevonden?"
+
+#~ msgid "Configuration"
+#~ msgstr "Configuratie"
