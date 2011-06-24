@@ -18,7 +18,7 @@ interface with some nice functions, widgets and more.
 	$query = new WP_Query();
 	$query->query(array(
 		'post_type' => 'pronamic_block' , 
-		'post_name' => 'contact'
+		'name' => 'contact' 
 	));
 
 	while($query->have_posts()) {
