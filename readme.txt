@@ -29,6 +29,13 @@ interface with some nice functions, widgets and more.
 
 	?>
 
+= Template Hierarchy Pronamic Block Widget =
+
+1.	pronamic-block-widget-{sidebar_id}.php
+2.	pronamic-block-widget-{widget_id}.php
+3.	pronamic-block-widget-{block_slug}.php
+4.	pronamic-block-widget-{block_id}.php
+5.	pronamic-block-widget.php
 
 == Installation ==
 
@@ -42,6 +49,9 @@ WordPress installation and then activate the Plugin from Plugins page.
 
 
 == Changelog ==
+
+= 1.3 =
+*	Added widget for Pronamic block post types
 
 = 1.2 =
 *	Added custom post type "pronamic_block"
