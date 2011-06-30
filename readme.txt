@@ -50,6 +50,9 @@ WordPress installation and then activate the Plugin from Plugins page.
 
 == Changelog ==
 
+= todo =
+*	Meta keywords
+
 = 1.3 =
 *	Added widget for Pronamic block post types
 
