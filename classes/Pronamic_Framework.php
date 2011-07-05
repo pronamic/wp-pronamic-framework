@@ -20,13 +20,22 @@ class Pronamic_Framework {
 	////////////////////////////////////////////////////////////
 
 	/**
+	 * The plugin root file
+	 * 
+	 * @var string
+	 */
+	public static $file;
+
+	////////////////////////////////////////////////////////////
+
+	/**
 	 * Bootstrap this plugin
 	 */
-	public static function bootstrap() {
+	public static function bootstrap($file) {
+		self::$file = $file;
+
 		// Actions
 		add_action('init', array(__CLASS__, 'initialize'));
-
-		add_action('wp_head', array(__CLASS__, 'head'));
 
 		add_action('wp_print_styles', array(__CLASS__, 'printStyles'));
 
@@ -51,7 +60,7 @@ class Pronamic_Framework {
 	 */
 	public static function initialize() {
 		// Load plugin text domain
-		$relPath = dirname(plugin_basename(__FILE__)) . '/languages/';
+		$relPath = dirname(plugin_basename(self::$file)) . '/languages/';
 
 		load_plugin_textdomain(self::SLUG, false, $relPath);
 
@@ -97,7 +106,7 @@ class Pronamic_Framework {
 			'has_archive' => true , 
 			'hierarchical' => true , 
 			'menu_position' => null , 
-			'menu_icon' =>  plugins_url('/admin/icons/block.png', __FILE__) ,
+			'menu_icon' =>  plugins_url('/admin/icons/block.png', self::$file) ,
 			'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments')
 		));
 	}
@@ -230,17 +239,5 @@ class Pronamic_Framework {
 		$text .= ' | ' . self::getCredits();
 	
 		return $text;
-	}
-
-	////////////////////////////////////////////////////////////
-	
-	/**
-	 * Extend the WordPress HTML head section with some Pronamic comments
-	 */
-	public static function head() {
-		?>
-		<meta name="developer" content="<?php _e('Pronamic', self::SLUG); ?>" />
-		<meta name="developer-website" content="<?php _e('http://pronamic.eu/', self::SLUG); ?>" />
-		<?php
 	}
 }
