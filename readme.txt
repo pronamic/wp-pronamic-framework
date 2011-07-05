@@ -3,7 +3,7 @@ Contributors: pronamic, remcotolsma
 Tags: pronamic, framework
 Requires at least: 3.0
 Tested up to: 3.2
-Stable tag: 1.2
+Stable tag: 1.3
 
 This plugin contains some handy WordPress functions and extends the WordPress admin 
 interface with some nice functions, widgets and more.
@@ -50,10 +50,9 @@ WordPress installation and then activate the Plugin from Plugins page.
 
 == Changelog ==
 
-= todo =
-*	Meta keywords
-
 = 1.3 =
+*	Removed the "developer" and "developer-website" meta elements, they are not on the HTML5 whitelist
+*	Fixed an issue with the classes in multiple files and the plugin paths
 *	Added widget for Pronamic block post types
 
 = 1.2 =
