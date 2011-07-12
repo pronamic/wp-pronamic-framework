@@ -3,7 +3,7 @@ Contributors: pronamic, remcotolsma
 Tags: pronamic, framework
 Requires at least: 3.0
 Tested up to: 3.2
-Stable tag: 1.3
+Stable tag: 1.3.1
 
 This plugin contains some handy WordPress functions and extends the WordPress admin 
 interface with some nice functions, widgets and more.
@@ -49,6 +49,10 @@ WordPress installation and then activate the Plugin from Plugins page.
 
 
 == Changelog ==
+
+= 1.3.1 =
+*	Removed comments support from the custom post type 'pronamic_block'
+*	Fixed the link to CSS file style.css in the enqueue style function call
 
 = 1.3 =
 *	Removed the "developer" and "developer-website" meta elements, they are not on the HTML5 whitelist

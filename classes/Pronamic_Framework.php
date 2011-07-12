@@ -107,7 +107,7 @@ class Pronamic_Framework {
 			'hierarchical' => true , 
 			'menu_position' => null , 
 			'menu_icon' =>  plugins_url('/admin/icons/block.png', self::$file) ,
-			'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments')
+			'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt')
 		));
 	}
 
@@ -181,7 +181,7 @@ class Pronamic_Framework {
 	public static function printStyles() {
 		wp_enqueue_style(
 			self::SLUG , 
-			plugins_url('/style.css', __FILE__)  
+			plugins_url('/style.css', self::$file)  
 		);
 	}
 
