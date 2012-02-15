@@ -3,7 +3,7 @@ Contributors: pronamic, remcotolsma
 Tags: pronamic, framework
 Requires at least: 3.0
 Tested up to: 3.2
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 
 This plugin contains some handy WordPress functions and extends the WordPress admin 
 interface with some nice functions, widgets and more.
@@ -49,6 +49,13 @@ WordPress installation and then activate the Plugin from Plugins page.
 
 
 == Changelog ==
+
+= 1.3.2 =
+*	Removed admin menu item 'Pronamic'
+*	Removed HTTP header 'X-Powered-By' => 'Pronamic | pronamic.nl | info@pronamic.nl'
+*	Removed credit funtions
+*	Removed admin footer function
+*	Removed Pronamic admin dashboard widget
 
 = 1.3.1 =
 *	Removed comments support from the custom post type 'pronamic_block'
