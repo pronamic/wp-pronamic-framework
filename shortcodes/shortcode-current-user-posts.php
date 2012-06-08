@@ -48,4 +48,4 @@ function pronamic_framework_get_edit_post_link($url, $postId, $context) {
 	return $url;
 }
 
-add_filter('get_edit_post_link', 'pronamic_framework_get_edit_post_link');
+add_filter('get_edit_post_link', 'pronamic_framework_get_edit_post_link', 10, 3);
