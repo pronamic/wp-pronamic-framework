@@ -1,5 +1,18 @@
 <?php
 
+/**
+ * Title: Pronamic block widget
+ * Description: 
+ * Copyright: Copyright (c) 2005 - 2011
+ * Company: Pronamic
+ * 
+ * @class Pronamic_Framework
+ * @package Pronamic Framework
+ * @since 1.0
+ * @category Class
+ * @author Remco Tolsma
+ * @version 1.0
+ */
 class Pronamic_Framework {
 	/**
 	 * The slug of this plugin
@@ -28,6 +41,8 @@ class Pronamic_Framework {
 		// Actions
 		add_action('init', array(__CLASS__, 'initialize'));
 
+		add_action('admin_enqueue_scripts', array(__CLASS__, 'adminEnqueueScripts'));
+
 		add_action('wp_print_styles', array(__CLASS__, 'printStyles'));
 
 		add_action('widgets_init', array(__CLASS__, 'initializeWidgets'));
@@ -42,7 +57,7 @@ class Pronamic_Framework {
 		// Load plugin text domain
 		$relPath = dirname(plugin_basename(self::$file)) . '/languages/';
 
-		load_plugin_textdomain(self::SLUG, false, $relPath);
+		load_plugin_textdomain('pronamic_framework', false, $relPath);
 
 		// Register post types
 		self::registerPostTypeBlock();
@@ -63,18 +78,18 @@ class Pronamic_Framework {
 	public static function registerPostTypeBlock() {
 		register_post_type('pronamic_block', array(
 			'labels' => array(
-				'name' => _x('Blocks', 'post type general name', self::SLUG) , 
-				'singular_name' => _x('Block', 'post type singular name', self::SLUG) , 
-				'add_new' => _x('Add New', 'block', self::SLUG) , 
-				'add_new_item' => __('Add New Block', self::SLUG) , 
-				'edit_item' => __('Edit Block', self::SLUG) , 
-				'new_item' => __('New Block', self::SLUG) , 
-				'view_item' => __('View Block', self::SLUG) , 
-				'search_items' => __('Search Blocks', self::SLUG) , 
-				'not_found' =>  __('No blocks found', self::SLUG) , 
-				'not_found_in_trash' => __('No blocks found in Trash', self::SLUG) , 
-				'parent_item_colon' => __('Parent Block:', self::SLUG) ,
-				'menu_name' => __('Blocks', self::SLUG) , 
+				'name' => _x('Blocks', 'post type general name', 'pronamic_framework') , 
+				'singular_name' => _x('Block', 'post type singular name', 'pronamic_framework') , 
+				'add_new' => _x('Add New', 'block', 'pronamic_framework') , 
+				'add_new_item' => __('Add New Block', 'pronamic_framework') , 
+				'edit_item' => __('Edit Block', 'pronamic_framework') , 
+				'new_item' => __('New Block', 'pronamic_framework') , 
+				'view_item' => __('View Block', 'pronamic_framework') , 
+				'search_items' => __('Search Blocks', 'pronamic_framework') , 
+				'not_found' =>  __('No blocks found', 'pronamic_framework') , 
+				'not_found_in_trash' => __('No blocks found in Trash', 'pronamic_framework') , 
+				'parent_item_colon' => __('Parent Block:', 'pronamic_framework') ,
+				'menu_name' => __('Blocks', 'pronamic_framework') , 
 			) , 
 			'public' => false , 
 			'publicly_queryable' => false , 
@@ -83,15 +98,22 @@ class Pronamic_Framework {
 			'query_var' => true , 
 			'rewrite' => true , 
 			'capability_type' => 'page' , 
-			'has_archive' => true , 
+			'has_archive' => false , 
 			'hierarchical' => true , 
 			'menu_position' => null , 
-			'menu_icon' =>  plugins_url('/admin/icons/block.png', self::$file) ,
+			// 'menu_icon' =>  plugins_url('/admin/icons/block.png', self::$file) ,
 			'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt')
 		));
 	}
 
 	////////////////////////////////////////////////////////////
+
+	/**
+	 * Admin enqueue scripts
+	 */
+	public static function adminEnqueueScripts() {
+		wp_enqueue_style('pronamic-framework', plugins_url('/assets/css/admin.css', self::$file));
+	}
 
 	/**
 	 * Print the styles

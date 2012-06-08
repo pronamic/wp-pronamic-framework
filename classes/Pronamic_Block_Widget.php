@@ -1,5 +1,18 @@
 <?php
 
+/**
+ * Title: Pronamic block widget
+ * Description: 
+ * Copyright: Copyright (c) 2005 - 2011
+ * Company: Pronamic
+ * 
+ * @class Pronamic_Block_Widget
+ * @package Pronamic Framework
+ * @since 1.0
+ * @category Class
+ * @author Remco Tolsma
+ * @version 1.0
+ */
 class Pronamic_Block_Widget extends WP_Widget {
 	public function __construct() {
 		parent::__construct(

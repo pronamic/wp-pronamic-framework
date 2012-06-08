@@ -50,6 +50,13 @@ WordPress installation and then activate the Plugin from Plugins page.
 
 == Changelog ==
 
+= trunk =
+*	Removed the use of class constant in translation function, now use normal strings
+*	Changed the text domain name from 'pronamic-framework' to 'pronamic_framework'
+*	Improved the custom post type 'pronamic_block' WordPress admin menu icon
+*	Added the [pronamic_login_form]  shortcode
+*	Added the [pronamic_current_user_posts] shortcode
+
 = 1.3.2 =
 *	Removed admin menu item 'Pronamic'
 *	Removed HTTP header 'X-Powered-By' => 'Pronamic | pronamic.nl | info@pronamic.nl'
