@@ -17,7 +17,7 @@ class Pronamic_Block_Widget extends WP_Widget {
 	public function __construct() {
 		parent::__construct(
 			'pronamic_block_widget', 
-			__('Pronamic Block', Pronamic_Framework::SLUG) , 
+			__('Pronamic Block', 'pronamic_framework') , 
 			array( // widget options
 				'classname' => 'pronamic-block'
 			) , 
@@ -45,7 +45,7 @@ class Pronamic_Block_Widget extends WP_Widget {
 		</p>
 		<p>
 			<label for="<?php echo $this->get_field_id('post_id'); ?>">
-				<?php _e('Block:', Pronamic_Framework::SLUG); ?>
+				<?php _e('Block:', 'pronamic_framework'); ?>
 
           		<select class="widefat" id="<?php echo $this->get_field_id('post_id'); ?>" name="<?php echo $this->get_field_name('post_id'); ?>">
 

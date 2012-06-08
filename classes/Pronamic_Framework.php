@@ -15,15 +15,6 @@
  */
 class Pronamic_Framework {
 	/**
-	 * The slug of this plugin
-	 * 
-	 * @var string
-	 */
-	const SLUG = 'pronamic-framework';
-
-	////////////////////////////////////////////////////////////
-
-	/**
 	 * The plugin root file
 	 * 
 	 * @var string
@@ -40,6 +31,10 @@ class Pronamic_Framework {
 
 		// Actions
 		add_action('init', array(__CLASS__, 'initialize'));
+		
+		add_action('admin_init', array(__CLASS__, 'adminInitialize'));
+
+		add_action('admin_menu', array(__CLASS__, 'adminMenu'));
 
 		add_action('admin_enqueue_scripts', array(__CLASS__, 'adminEnqueueScripts'));
 
@@ -62,6 +57,40 @@ class Pronamic_Framework {
 		// Register post types
 		self::registerPostTypeBlock();
 	}
+
+	/**
+	 * Admin initialize
+	 */
+	public static function adminInitialize() {
+		// Settings
+		register_setting('pronamic-framework', 'pronamic_framework_edit_post_page_id');
+	}
+
+	//////////////////////////////////////////////////
+	
+	/**
+	 * Admin menu
+	 */
+	public static function adminMenu() {
+		add_options_page(
+			__('Pronamic', 'pronamic_framework') , // $page_title
+			__('Pronamic', 'pronamic_framework') , // $menu_title 
+			'manage_options' , // $capability 
+			'pronamic-framework' , // $menu_slug
+			array(__CLASS__, 'optionsPage') // $function
+		);
+	}
+
+	//////////////////////////////////////////////////
+
+	/**
+	 * Options page
+	 */
+	public static function optionsPage() {
+		include plugin_dir_path(Pronamic_Framework::$file) . '/admin/settings.php';
+	}
+
+	//////////////////////////////////////////////////
 	
 	/**
 	 * Initialize widgets
@@ -119,9 +148,7 @@ class Pronamic_Framework {
 	 * Print the styles
 	 */
 	public static function printStyles() {
-		wp_enqueue_style(
-			self::SLUG , 
-			plugins_url('/style.css', self::$file)  
+		wp_enqueue_style('pronamic-framework' , plugins_url('/style.css', self::$file)  
 		);
 	}
 }
