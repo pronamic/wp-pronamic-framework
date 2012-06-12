@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pronamic Framework\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-26 16:51+0100\n"
-"PO-Revision-Date: 2012-04-26 16:51+0100\n"
+"POT-Creation-Date: 2012-06-12 11:21+0100\n"
+"PO-Revision-Date: 2012-06-12 11:21+0100\n"
 "Last-Translator: Remco Tolsma <remco@pronamic.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "MIME-Version: 1.0\n"
@@ -16,13 +16,66 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-SearchPath-0: .\n"
 
+#: templates/edit-post-form.php:11
+#: classes/Pronamic_Block_Widget.php:41
+msgid "Title:"
+msgstr "Titel"
+
+#: templates/edit-post-form.php:17
+msgid "Update"
+msgstr "Bijwerken"
+
 #: templates/current-user-posts.php:7
 msgid "Title"
 msgstr "Titel"
 
 #: templates/current-user-posts.php:10
+msgid "Date"
+msgstr "Datum"
+
+#: templates/current-user-posts.php:13
 msgid "Actions"
 msgstr "Acties"
+
+#: admin/settings.php:5
+#: classes/Pronamic_Framework.php:78
+#: classes/Pronamic_Framework.php:79
+msgid "Pronamic"
+msgstr "Pronamic"
+
+#: admin/settings.php:17
+msgid "Pages"
+msgstr "Pagina's"
+
+#: admin/settings.php:23
+msgid "Login Page"
+msgstr "Inloggen pagina"
+
+#: admin/settings.php:31
+#: admin/settings.php:47
+#: admin/settings.php:63
+msgid "&mdash; Select a page &mdash;"
+msgstr "&mdash; Selecteer een pagina &mdash;"
+
+#: admin/settings.php:39
+msgid "Lost Password Page"
+msgstr "Wachtwoord vergeten pagina"
+
+#: admin/settings.php:55
+msgid "Edit Post Page"
+msgstr "Bewerk bericht pagina"
+
+#: shortcodes/shortcode-lostpassword-form.php:24
+msgid "Check your e-mail for the confirmation link."
+msgstr "Controleer uw e-mail voor de bevestiging link."
+
+#: shortcodes/shortcode-lostpassword-form.php:31
+msgid "Username or Email:"
+msgstr "Gebruikersnaam of e-mailadres:"
+
+#: shortcodes/shortcode-lostpassword-form.php:41
+msgid "Reset Password"
+msgstr "Wachtwoord opnieuw instellen"
 
 #: shortcodes/shortcode-login-form.php:49
 #, php-format
@@ -61,62 +114,58 @@ msgstr "Onthoud mij"
 msgid "Pronamic Block"
 msgstr "Pronamic blok"
 
-#: classes/Pronamic_Block_Widget.php:41
-msgid "Title:"
-msgstr "Titel"
-
 #: classes/Pronamic_Block_Widget.php:48
 msgid "Block:"
 msgstr "Blok:"
 
-#: classes/Pronamic_Framework.php:81
+#: classes/Pronamic_Framework.php:112
 msgctxt "post type general name"
 msgid "Blocks"
 msgstr "Blokken"
 
-#: classes/Pronamic_Framework.php:82
+#: classes/Pronamic_Framework.php:113
 msgctxt "post type singular name"
 msgid "Block"
 msgstr "Blok"
 
-#: classes/Pronamic_Framework.php:83
+#: classes/Pronamic_Framework.php:114
 msgctxt "block"
 msgid "Add New"
 msgstr "Nieuw blok"
 
-#: classes/Pronamic_Framework.php:84
+#: classes/Pronamic_Framework.php:115
 msgid "Add New Block"
 msgstr "Nieuw blok toevoegen"
 
-#: classes/Pronamic_Framework.php:85
+#: classes/Pronamic_Framework.php:116
 msgid "Edit Block"
 msgstr "Blok wijzigen"
 
-#: classes/Pronamic_Framework.php:86
+#: classes/Pronamic_Framework.php:117
 msgid "New Block"
 msgstr "Nieuw blok"
 
-#: classes/Pronamic_Framework.php:87
+#: classes/Pronamic_Framework.php:118
 msgid "View Block"
 msgstr "Bekijk blok"
 
-#: classes/Pronamic_Framework.php:88
+#: classes/Pronamic_Framework.php:119
 msgid "Search Blocks"
 msgstr "Blokken zoeken"
 
-#: classes/Pronamic_Framework.php:89
+#: classes/Pronamic_Framework.php:120
 msgid "No blocks found"
 msgstr "Geen blokken gevonden"
 
-#: classes/Pronamic_Framework.php:90
+#: classes/Pronamic_Framework.php:121
 msgid "No blocks found in Trash"
 msgstr "Geen blokken gevonden in prullenbak"
 
-#: classes/Pronamic_Framework.php:91
+#: classes/Pronamic_Framework.php:122
 msgid "Parent Block:"
 msgstr "Bovenliggende blok:"
 
-#: classes/Pronamic_Framework.php:92
+#: classes/Pronamic_Framework.php:123
 msgid "Blocks"
 msgstr "Blokken"
 
@@ -149,9 +198,6 @@ msgstr "Blokken"
 
 #~ msgid "News"
 #~ msgstr "Nieuws"
-
-#~ msgid "Pronamic News"
-#~ msgstr "Pronamic nieuws"
 
 #~ msgid "Concept and realisation by %s"
 #~ msgstr "Concept en realisatie door %s"

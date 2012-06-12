@@ -13,6 +13,7 @@ License: GPL
 require_once 'classes/Pronamic_Block_Widget.php';
 require_once 'classes/Pronamic_Framework.php';
 require_once 'shortcodes/shortcode-login-form.php';
+require_once 'shortcodes/shortcode-lostpassword-form.php';
 require_once 'shortcodes/shortcode-current-user-posts.php';
 require_once 'shortcodes/shortcode-edit-post-form.php';
 

@@ -3,7 +3,7 @@
 /**
  * Pronamic framework edit post
  */
-function pronamic_framework_edit_post($atts, $content = null) {
+function pronamic_framework_shortcode_edit_post_form($atts, $content = null) {
 	$result = '';
 
 	if(is_user_logged_in()) {
@@ -47,7 +47,7 @@ function pronamic_framework_edit_post($atts, $content = null) {
 	return $result;
 }
 
-add_shortcode('pronamic_edit_post', 'pronamic_framework_edit_post');
+add_shortcode('pronamic_edit_post_form', 'pronamic_framework_shortcode_edit_post_form');
 
 function pronamic_framework_maybe_save_post() {
 	if(isset($_POST['pronamic_framework_edit_post_submit'])) {

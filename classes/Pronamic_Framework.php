@@ -63,6 +63,8 @@ class Pronamic_Framework {
 	 */
 	public static function adminInitialize() {
 		// Settings
+		register_setting('pronamic-framework', 'pronamic_framework_login_page_id');
+		register_setting('pronamic-framework', 'pronamic_framework_lostpassword_page_id');
 		register_setting('pronamic-framework', 'pronamic_framework_edit_post_page_id');
 	}
 

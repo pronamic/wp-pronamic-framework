@@ -1,6 +1,7 @@
 === Pronamic Framework ===
 Contributors: pronamic, remcotolsma 
 Tags: pronamic, framework
+Donate link: http://pronamic.eu/donate/?for=wp-plugin-pronamic-framework&source=wp-plugin-readme-txt
 Requires at least: 3.0
 Tested up to: 3.2
 Stable tag: 1.3.2
@@ -10,6 +11,29 @@ interface with some nice functions, widgets and more.
 
 
 == Description ==
+
+= Shortcodes =
+
+*	**Login form**
+	
+		[pronamic_login_form]
+
+		[pronamic_login_form redirect_to="/"]
+
+*	**Lost password form**
+
+		[pronamic_lostpassword_form]
+
+*	**Current user posts**
+
+		[pronamic_current_user_posts]
+
+		[pronamic_current_user_posts query="post_type=company"]
+
+*	**Edit post form**
+
+		[pronamic_edit_post_form]
+
 
 = Query to display block =
 
@@ -50,12 +74,14 @@ WordPress installation and then activate the Plugin from Plugins page.
 
 == Changelog ==
 
-= trunk =
+= 1.3.3 =
 *	Removed the use of class constant in translation function, now use normal strings
 *	Changed the text domain name from 'pronamic-framework' to 'pronamic_framework'
 *	Improved the custom post type 'pronamic_block' WordPress admin menu icon
 *	Added the [pronamic_login_form]  shortcode
 *	Added the [pronamic_current_user_posts] shortcode
+*	Added the [pronamic_lostpassword_form]  shortcode
+*	Added Pronamic settings page to set some pages
 
 = 1.3.2 =
 *	Removed admin menu item 'Pronamic'

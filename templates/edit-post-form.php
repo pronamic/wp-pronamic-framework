@@ -14,7 +14,7 @@
 		</p>
 
 		<p>
-			<input type="submit" name="pronamic_framework_edit_post_submit" value="<?php esc_attr_e( 'Submit', 'pronamic_framework' ); ?>" />
+			<input type="submit" name="pronamic_framework_edit_post_submit" value="<?php esc_attr_e('Update', 'pronamic_framework' ); ?>" />
 		</p>
 	</form>
 

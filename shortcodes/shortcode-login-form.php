@@ -3,7 +3,7 @@
 /**
  * Handle login
  */
-function pronamic_framework_login() {
+function pronamic_framework_maybe_login() {
 	// Initialize global
 	global $pronamic_framework_error, $pronamic_framework_login_form_i;
 
@@ -28,7 +28,7 @@ function pronamic_framework_login() {
 	}
 }
 
-add_action('init', 'pronamic_framework_login');
+add_action('init', 'pronamic_framework_maybe_login');
 
 /**
  * Login form
