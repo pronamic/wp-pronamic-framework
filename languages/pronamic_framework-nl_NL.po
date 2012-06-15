@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pronamic Framework\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-12 11:21+0100\n"
-"PO-Revision-Date: 2012-06-12 11:21+0100\n"
+"POT-Creation-Date: 2012-06-15 13:37+0100\n"
+"PO-Revision-Date: 2012-06-15 13:37+0100\n"
 "Last-Translator: Remco Tolsma <remco@pronamic.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "MIME-Version: 1.0\n"
@@ -19,11 +19,19 @@ msgstr ""
 #: templates/edit-post-form.php:11
 #: classes/Pronamic_Block_Widget.php:41
 msgid "Title:"
-msgstr "Titel"
+msgstr "Titel:"
 
 #: templates/edit-post-form.php:17
+msgid "Image:"
+msgstr "Afbeelding:"
+
+#: templates/edit-post-form.php:25
 msgid "Update"
 msgstr "Bijwerken"
+
+#: templates/edit-post-form.php:36
+msgid "You attempted to edit an item that doesn&#8217;t exist. Perhaps it was deleted?"
+msgstr "Je probeerde iets te bewerken dat niet bestaat. Misschien is het verwijderd?"
 
 #: templates/current-user-posts.php:7
 msgid "Title"

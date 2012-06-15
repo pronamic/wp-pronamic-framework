@@ -74,6 +74,10 @@ WordPress installation and then activate the Plugin from Plugins page.
 
 == Changelog ==
 
+= trunk =
+*	Improved default template for the edit post form shortcode
+*	Improved the query to retrieve the post to edit in the edit post form shortcode
+
 = 1.3.3 =
 *	Removed the use of class constant in translation function, now use normal strings
 *	Changed the text domain name from 'pronamic-framework' to 'pronamic_framework'
