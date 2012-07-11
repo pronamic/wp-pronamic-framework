@@ -4,7 +4,7 @@ Tags: pronamic, framework
 Donate link: http://pronamic.eu/donate/?for=wp-plugin-pronamic-framework&source=wp-plugin-readme-txt
 Requires at least: 3.0
 Tested up to: 3.2
-Stable tag: 1.3.3
+Stable tag: 1.4
 
 This plugin contains some handy WordPress functions and extends the WordPress admin 
 interface with some nice functions, widgets and more.
