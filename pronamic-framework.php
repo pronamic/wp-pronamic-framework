@@ -16,5 +16,6 @@ require_once 'shortcodes/shortcode-login-form.php';
 require_once 'shortcodes/shortcode-lostpassword-form.php';
 require_once 'shortcodes/shortcode-current-user-posts.php';
 require_once 'shortcodes/shortcode-edit-post-form.php';
+require_once 'functions/file-select.php';
 
 Pronamic_Framework::bootstrap(__FILE__);

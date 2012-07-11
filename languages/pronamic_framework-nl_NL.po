@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pronamic Framework\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-15 13:37+0100\n"
-"PO-Revision-Date: 2012-06-15 13:37+0100\n"
+"POT-Creation-Date: 2012-07-10 14:57+0100\n"
+"PO-Revision-Date: 2012-07-10 14:58+0100\n"
 "Last-Translator: Remco Tolsma <remco@pronamic.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "MIME-Version: 1.0\n"
@@ -16,20 +16,28 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: templates/edit-post-form.php:11
+#: functions/file-select.php:16
+msgid "Select File"
+msgstr "Selecteer bestand"
+
+#: functions/file-select.php:34
+msgid "Select"
+msgstr "Selecteer"
+
+#: templates/edit-post-form.php:15
 #: classes/Pronamic_Block_Widget.php:41
 msgid "Title:"
 msgstr "Titel:"
 
-#: templates/edit-post-form.php:17
+#: templates/edit-post-form.php:29
 msgid "Image:"
 msgstr "Afbeelding:"
 
-#: templates/edit-post-form.php:25
+#: templates/edit-post-form.php:37
 msgid "Update"
 msgstr "Bijwerken"
 
-#: templates/edit-post-form.php:36
+#: templates/edit-post-form.php:48
 msgid "You attempted to edit an item that doesn&#8217;t exist. Perhaps it was deleted?"
 msgstr "Je probeerde iets te bewerken dat niet bestaat. Misschien is het verwijderd?"
 
@@ -51,25 +59,25 @@ msgstr "Acties"
 msgid "Pronamic"
 msgstr "Pronamic"
 
-#: admin/settings.php:17
+#: admin/settings.php:18
 msgid "Pages"
 msgstr "Pagina's"
 
-#: admin/settings.php:23
+#: admin/settings.php:24
 msgid "Login Page"
 msgstr "Inloggen pagina"
 
-#: admin/settings.php:31
-#: admin/settings.php:47
-#: admin/settings.php:63
+#: admin/settings.php:32
+#: admin/settings.php:48
+#: admin/settings.php:64
 msgid "&mdash; Select a page &mdash;"
 msgstr "&mdash; Selecteer een pagina &mdash;"
 
-#: admin/settings.php:39
+#: admin/settings.php:40
 msgid "Lost Password Page"
 msgstr "Wachtwoord vergeten pagina"
 
-#: admin/settings.php:55
+#: admin/settings.php:56
 msgid "Edit Post Page"
 msgstr "Bewerk bericht pagina"
 
