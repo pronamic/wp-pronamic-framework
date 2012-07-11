@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pronamic Framework\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-10 14:57+0100\n"
-"PO-Revision-Date: 2012-07-10 14:58+0100\n"
+"POT-Creation-Date: 2012-07-11 10:54+0100\n"
+"PO-Revision-Date: 2012-07-11 10:54+0100\n"
 "Last-Translator: Remco Tolsma <remco@pronamic.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "MIME-Version: 1.0\n"
@@ -16,13 +16,34 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: functions/file-select.php:16
-msgid "Select File"
-msgstr "Selecteer bestand"
+#: functions/media-select.php:16
+msgid "Select Media&hellip;"
+msgstr "Selecteer media&hellip;"
 
-#: functions/file-select.php:34
+#: functions/media-select.php:17
+#: functions/media-select.php:31
 msgid "Select"
 msgstr "Selecteer"
+
+#: functions/media-select.php:18
+msgid "Delete"
+msgstr "Verwijder"
+
+#: functions/media-select.php:19
+msgid "Loading preview&hellip;"
+msgstr "Preview laden&hellip;"
+
+#: functions/user-image.php:5
+msgid "Media"
+msgstr "Media"
+
+#: functions/user-image.php:11
+msgid "Profile Image"
+msgstr "Profiel afbeelding"
+
+#: functions/user-image.php:16
+msgid "Select an image from the media library. This may be shown publicly."
+msgstr "Selecteer een afbelding uit de media bibliotheek. Deze kan voor iedereen zichtbaar zijn."
 
 #: templates/edit-post-form.php:15
 #: classes/Pronamic_Block_Widget.php:41
@@ -184,6 +205,9 @@ msgstr "Bovenliggende blok:"
 #: classes/Pronamic_Framework.php:123
 msgid "Blocks"
 msgstr "Blokken"
+
+#~ msgid "Image"
+#~ msgstr "Afbeelding"
 
 #~ msgid "http://pronamic.eu/"
 #~ msgstr "http://pronamic.nl/"
