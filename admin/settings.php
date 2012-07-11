@@ -12,7 +12,6 @@
 		settings_fields('pronamic-framework'); 
 
 		?>
-		<?php pronamic_file_select('pronamic-file-select', 24717); ?>
 
 		<h3>
 			<?php _e('Pages', 'pronamic_framework'); ?>

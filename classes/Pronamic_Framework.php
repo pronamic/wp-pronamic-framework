@@ -150,7 +150,6 @@ class Pronamic_Framework {
 	 * Print the styles
 	 */
 	public static function printStyles() {
-		wp_enqueue_style('pronamic-framework' , plugins_url('/style.css', self::$file)  
-		);
+		wp_enqueue_style('pronamic-framework' , plugins_url('/style.css', self::$file)  );
 	}
 }

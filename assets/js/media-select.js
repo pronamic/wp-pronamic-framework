@@ -22,10 +22,10 @@
     				window.pronamicSelectField = $this;
 
     				tb_show( 
-    					pronamicMediaSelectL10n.selectFileText , 
+    					pronamicMediaSelectL10n.selectMediaText , 
     					"media-upload.php" + "?" + $.param({
     						post_id: "" , 
-    						tab: "library" , 
+    						// tab: "library" , 
     						type: "file" , 
     						TB_iframe: "true" 
     					})
@@ -68,16 +68,15 @@ jQuery(document).ajaxSuccess(function(e, xhr, settings) {
 
 jQuery( document ).ready( function( $ ) {
 	$("input.pronamic-media-select").pronamicWordPressMediaSelect();
-});
 
-jQuery( document ).ready( function( $ ) {
+	// Media select popup
 	if( parent.pronamicSelectField ) {
 		$("body").addClass("pronamic-media-select");
 
 		$(".media-upload-form").bind("click.uploader", function(e) {
 			var target = $(e.target), tr, c;
 
-			if ( target.is(".pronamic-select-file-button") ) {
+			if ( target.is(".pronamic-media-select-button") ) {
 				var win = window.dialogArguments || opener || parent || top;
 
 				var post_id = target.data("post_id");

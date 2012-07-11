@@ -35,6 +35,35 @@ interface with some nice functions, widgets and more.
 		[pronamic_edit_post_form]
 
 
+= Template Functions =
+
+*	**Has user image**
+
+		pronamic_has_user_image( $user_id = null )
+
+*	**Get user image ID**
+
+		pronamic_get_user_image_id( $user_id = null )
+
+*	**The user image**
+
+		pronamic_the_user_image( $size = 'post-thumbnail', $attr = '')
+
+*	**Get user image**
+
+		pronamic_get_the_user_image( $user_id = null, $size = 'post-thumbnail', $attr = '' )
+
+*	**How to use?**
+
+		$author = (get_query_var('author_name')) ? get_user_by('slug', get_query_var('author_name')) : get_userdata(get_query_var('author'));
+
+		if(function_exists('pronamic_get_the_user_image')) {
+			echo pronamic_get_the_user_image( $author->ID, array(93, 140) );
+		} else {
+			echo get_avatar(get_the_author_meta('user_email', $author->ID), apply_filters('horses_author_bio_avatar_size', 90));
+		}
+
+
 = Query to display block =
 
 	<?php
@@ -74,9 +103,12 @@ WordPress installation and then activate the Plugin from Plugins page.
 
 == Changelog ==
 
-= trunk =
+= 1.4 =
 *	Improved default template for the edit post form shortcode
 *	Improved the query to retrieve the post to edit in the edit post form shortcode
+*	Added media select
+*	Added user image
+*	Fixed login form shortcode redirect_to parameter
 
 = 1.3.3 =
 *	Removed the use of class constant in translation function, now use normal strings

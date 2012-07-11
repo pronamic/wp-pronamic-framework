@@ -23,10 +23,9 @@ function pronamic_media_select_scripts( $hook_suffix ) {
 
 add_action( 'admin_enqueue_scripts', 'pronamic_media_select_scripts' );
 
-
 function pronamic_attachment_fields_to_edit($form_fields, $post) {
 	$field = sprintf(
-		'<a class="button pronamic-select-file-button" data-post_id="%s">%s</a>' , 
+		'<a class="button pronamic-media-select-button" data-post_id="%s">%s</a>' , 
 		$post->ID , 
 		__( 'Select', 'pronamic_framework')
 	);
