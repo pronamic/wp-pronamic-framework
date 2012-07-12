@@ -22,9 +22,7 @@ function pronamic_has_user_image( $user_id = null ) {
  * @return int
  */
 function pronamic_get_user_image_id( $user_id = null ) {
-	$current_user = wp_get_current_user();
-
-	$user_id = ( null === $user_id ) ? $current_user->ID : $user_id;
+	$user_id = ( null === $user_id ) ? get_the_author_meta('ID') : $user_id;
 
 	return get_user_meta( $user_id, '_pronamic_image_id', true );
 }
@@ -47,9 +45,7 @@ function pronamic_the_user_image( $size = 'post-thumbnail', $attr = '') {
  * @param string|array $attr
  */
 function pronamic_get_the_user_image( $user_id = null, $size = 'post-thumbnail', $attr = '' ) {
-	$current_user = wp_get_current_user();
-
-	$user_id = ( null === $user_id ) ? $current_user->ID : $user_id;
+	$user_id = ( null === $user_id ) ? get_the_author_meta('ID') : $user_id;
 
 	$user_image_id = pronamic_get_user_image_id( $user_id );
 

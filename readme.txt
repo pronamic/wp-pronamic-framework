@@ -103,6 +103,9 @@ WordPress installation and then activate the Plugin from Plugins page.
 
 == Changelog ==
 
+= trunk =
+*	Changed the user image template function, now by default use the author ID instead of logged in user ID
+
 = 1.4 =
 *	Improved default template for the edit post form shortcode
 *	Improved the query to retrieve the post to edit in the edit post form shortcode
