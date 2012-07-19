@@ -41,6 +41,8 @@ class Pronamic_Framework {
 		add_action('wp_print_styles', array(__CLASS__, 'printStyles'));
 
 		add_action('widgets_init', array(__CLASS__, 'initializeWidgets'));
+		
+		add_action('template_redirect', array(__CLASS__, 'maybeLogout'));
 	}
 
 	//////////////////////////////////////////////////
@@ -64,6 +66,7 @@ class Pronamic_Framework {
 	public static function adminInitialize() {
 		// Settings
 		register_setting('pronamic-framework', 'pronamic_framework_login_page_id');
+		register_setting('pronamic-framework', 'pronamic_framework_logout_page_id');
 		register_setting('pronamic-framework', 'pronamic_framework_lostpassword_page_id');
 		register_setting('pronamic-framework', 'pronamic_framework_edit_post_page_id');
 	}
@@ -150,7 +153,29 @@ class Pronamic_Framework {
 	 * Print the styles
 	 */
 	public static function printStyles() {
-		wp_enqueue_style('pronamic-framework' , plugins_url('/style.css', self::$file)  
-		);
+		wp_enqueue_style('pronamic-framework' , plugins_url('/style.css', self::$file)  );
+	}
+
+	////////////////////////////////////////////////////////////
+	
+	/**
+	 * Logout
+	 */
+	public static function maybeLogout() {
+		$page_id = get_option('pronamic_framework_logout_page_id');
+
+		if( ! empty( $page_id ) && is_page( $page_id ) ) {
+			wp_logout();
+
+			$redirect_to = filter_input( INPUT_GET, 'redirect_to', FILTER_SANITIZE_STRING );
+
+			if( empty( $redirect_to ) ) {
+				$redirect_to = site_url();
+			}
+			
+			wp_safe_redirect( $redirect_to );
+			
+			exit;
+		}
 	}
 }

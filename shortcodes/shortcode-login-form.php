@@ -121,7 +121,7 @@ function pronamic_framework_shortcode_login_form($atts, $content = null) {
 	$result = '';
 
 	extract(shortcode_atts(array(
-		'redirect' => null
+		'redirect_to' => null
 	), $atts));
 
 	if(!is_user_logged_in()) {
