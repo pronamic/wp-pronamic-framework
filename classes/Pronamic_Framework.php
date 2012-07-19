@@ -164,7 +164,7 @@ class Pronamic_Framework {
 	public static function maybeLogout() {
 		$page_id = get_option('pronamic_framework_logout_page_id');
 
-		if( is_page( $page_id ) ) {
+		if( ! empty( $page_id ) && is_page( $page_id ) ) {
 			wp_logout();
 
 			$redirect_to = filter_input( INPUT_GET, 'redirect_to', FILTER_SANITIZE_STRING );

@@ -103,6 +103,10 @@ WordPress installation and then activate the Plugin from Plugins page.
 
 == Changelog ==
 
+= 1.4.2 =
+*	Fix logout page if no logout page is selected
+*	Added translations for the logout page
+
 = 1.4.1 =
 *	Changed the user image template function, now by default use the author ID instead of logged in user ID
 *	Added logout page support
