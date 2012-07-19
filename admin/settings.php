@@ -36,6 +36,22 @@
 			</tr>
 			<tr valign="top">
 				<th scope="row">
+					<label for="pronamic_framework_logout_page_id"><?php _e('Logout Page', 'pronamic_framework'); ?></label>
+				</th>
+				<td>
+					<?php 
+
+					wp_dropdown_pages(array(
+						'name' => 'pronamic_framework_logout_page_id' , 
+						'selected' => get_option('pronamic_framework_logout_page_id', '') ,  
+						'show_option_none' => __('&mdash; Select a page &mdash;', 'pronamic_framework') 
+					)); 
+
+					?>
+				</td>
+			</tr>
+			<tr valign="top">
+				<th scope="row">
 					<label for="pronamic_framework_lostpassword_page_id"><?php _e('Lost Password Page', 'pronamic_framework'); ?></label>
 				</th>
 				<td>

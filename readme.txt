@@ -103,8 +103,9 @@ WordPress installation and then activate the Plugin from Plugins page.
 
 == Changelog ==
 
-= trunk =
+= 1.4.1 =
 *	Changed the user image template function, now by default use the author ID instead of logged in user ID
+*	Added logout page support
 
 = 1.4 =
 *	Improved default template for the edit post form shortcode

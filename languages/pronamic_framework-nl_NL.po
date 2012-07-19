@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pronamic Framework\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-11 10:54+0100\n"
-"PO-Revision-Date: 2012-07-11 10:54+0100\n"
+"POT-Creation-Date: 2012-07-16 08:44+0100\n"
+"PO-Revision-Date: 2012-07-16 08:48+0100\n"
 "Last-Translator: Remco Tolsma <remco@pronamic.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,7 @@ msgid "Select Media&hellip;"
 msgstr "Selecteer media&hellip;"
 
 #: functions/media-select.php:17
-#: functions/media-select.php:31
+#: functions/media-select.php:30
 msgid "Select"
 msgstr "Selecteer"
 
@@ -43,7 +43,7 @@ msgstr "Profiel afbeelding"
 
 #: functions/user-image.php:16
 msgid "Select an image from the media library. This may be shown publicly."
-msgstr "Selecteer een afbelding uit de media bibliotheek. Deze kan voor iedereen zichtbaar zijn."
+msgstr "Selecteer een afbeelding uit de media bibliotheek. Deze kan voor iedereen zichtbaar zijn."
 
 #: templates/edit-post-form.php:15
 #: classes/Pronamic_Block_Widget.php:41
@@ -80,25 +80,25 @@ msgstr "Acties"
 msgid "Pronamic"
 msgstr "Pronamic"
 
-#: admin/settings.php:18
+#: admin/settings.php:17
 msgid "Pages"
 msgstr "Pagina's"
 
-#: admin/settings.php:24
+#: admin/settings.php:23
 msgid "Login Page"
 msgstr "Inloggen pagina"
 
-#: admin/settings.php:32
-#: admin/settings.php:48
-#: admin/settings.php:64
+#: admin/settings.php:31
+#: admin/settings.php:47
+#: admin/settings.php:63
 msgid "&mdash; Select a page &mdash;"
 msgstr "&mdash; Selecteer een pagina &mdash;"
 
-#: admin/settings.php:40
+#: admin/settings.php:39
 msgid "Lost Password Page"
 msgstr "Wachtwoord vergeten pagina"
 
-#: admin/settings.php:56
+#: admin/settings.php:55
 msgid "Edit Post Page"
 msgstr "Bewerk bericht pagina"
 
