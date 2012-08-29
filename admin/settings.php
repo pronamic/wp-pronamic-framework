@@ -84,6 +84,29 @@
 			</tr>
 		</table>
 
+		<h3>
+			<?php _e( 'HTML', 'pronamic_framework' ); ?>
+		</h3>
+
+		<table class="form-table">
+			<tr valign="top">
+				<th scope="row">
+					<label for="pronamic_framework_html_head"><?php _e( 'Head', 'pronamic_framework' ); ?></label>
+				</th>
+				<td>
+					<textarea id="pronamic_framework_html_head" name="pronamic_framework_html_head" rows="10" cols="60"><?php echo esc_textarea( get_option( 'pronamic_framework_html_head' ) ); ?></textarea>
+				</td>
+			</tr>
+			<tr valign="top">
+				<th scope="row">
+					<label for="pronamic_framework_html_footer"><?php _e( 'Footer', 'pronamic_framework' ); ?></label>
+				</th>
+				<td>
+					<textarea id="pronamic_framework_html_footer" name="pronamic_framework_html_footer" rows="10" cols="60"><?php echo esc_textarea( get_option( 'pronamic_framework_html_footer' ) ); ?></textarea>
+				</td>
+			</tr>
+		</table>
+
 		<?php submit_button(); ?>
 	</form>
 </div>

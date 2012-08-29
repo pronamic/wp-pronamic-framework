@@ -32,6 +32,9 @@ class Pronamic_Framework {
 		// Actions
 		add_action('init', array(__CLASS__, 'initialize'));
 		
+		add_action( 'wp_head'  , array( __CLASS__ , 'wp_head' ) );
+		add_action( 'wp_footer', array( __CLASS__ , 'wp_footer'  ) );
+		
 		add_action('admin_init', array(__CLASS__, 'adminInitialize'));
 
 		add_action('admin_menu', array(__CLASS__, 'adminMenu'));
@@ -60,6 +63,18 @@ class Pronamic_Framework {
 		self::registerPostTypeBlock();
 	}
 
+	//////////////////////////////////////////////////
+
+	public static function wp_head() {
+		echo get_option( 'pronamic_framework_html_head' );
+	}
+
+	public static function wp_footer() {
+		echo get_option( 'pronamic_framework_html_footer' );
+	}
+
+	//////////////////////////////////////////////////
+
 	/**
 	 * Admin initialize
 	 */
@@ -69,6 +84,9 @@ class Pronamic_Framework {
 		register_setting('pronamic-framework', 'pronamic_framework_logout_page_id');
 		register_setting('pronamic-framework', 'pronamic_framework_lostpassword_page_id');
 		register_setting('pronamic-framework', 'pronamic_framework_edit_post_page_id');
+
+		register_setting('pronamic-framework', 'pronamic_framework_html_head');
+		register_setting('pronamic-framework', 'pronamic_framework_html_footer');
 	}
 
 	//////////////////////////////////////////////////
