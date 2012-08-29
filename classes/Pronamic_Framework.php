@@ -80,13 +80,13 @@ class Pronamic_Framework {
 	 */
 	public static function adminInitialize() {
 		// Settings
-		register_setting('pronamic-framework', 'pronamic_framework_login_page_id');
-		register_setting('pronamic-framework', 'pronamic_framework_logout_page_id');
-		register_setting('pronamic-framework', 'pronamic_framework_lostpassword_page_id');
-		register_setting('pronamic-framework', 'pronamic_framework_edit_post_page_id');
+		register_setting( 'pronamic-framework', 'pronamic_framework_login_page_id' );
+		register_setting( 'pronamic-framework', 'pronamic_framework_logout_page_id' );
+		register_setting( 'pronamic-framework', 'pronamic_framework_lostpassword_page_id' );
+		register_setting( 'pronamic-framework', 'pronamic_framework_edit_post_page_id' );
 
-		register_setting('pronamic-framework', 'pronamic_framework_html_head');
-		register_setting('pronamic-framework', 'pronamic_framework_html_footer');
+		register_setting( 'pronamic-framework', 'pronamic_framework_html_head' );
+		register_setting( 'pronamic-framework', 'pronamic_framework_html_footer' );
 
 		$post_types = get_post_types();
 
@@ -104,11 +104,11 @@ class Pronamic_Framework {
 	 */
 	public static function adminMenu() {
 		add_options_page(
-			__('Pronamic', 'pronamic_framework') , // $page_title
-			__('Pronamic', 'pronamic_framework') , // $menu_title 
-			'manage_options' , // $capability 
-			'pronamic-framework' , // $menu_slug
-			array(__CLASS__, 'optionsPage') // $function
+			__( 'Pronamic', 'pronamic_framework' ) , // page_title
+			__( 'Pronamic', 'pronamic_framework' ) , // menu_title 
+			'manage_options' , // capability 
+			'pronamic-framework' , // menu_slug
+			array( __CLASS__, 'optionsPage' ) // function
 		);
 	}
 
