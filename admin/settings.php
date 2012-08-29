@@ -107,6 +107,35 @@
 			</tr>
 		</table>
 
+		<?php 
+		
+		$post_types = get_post_types( array(), 'objects' );
+
+		if ( ! empty( $post_types ) ): ?>
+
+			<h3>
+				<?php _e( 'Post Type Descriptions', 'pronamic_framework' ); ?>
+			</h3>
+	
+			<table class="form-table">
+				<?php foreach ( $post_types as $post_type ): ?>
+					<tr>
+						<?php $name = 'pronamic_framework_post_type_description_' . $post_type->name; ?>
+	
+						<th scope="row">
+							<label for="<?php echo $name; ?>">
+								<?php echo isset( $post_type->label ) ? $post_type->label : $post_type->name; ?>
+							</label>
+						</th>
+						<td>
+							<?php wp_editor( get_option( $name, '' ), $name ); ?>
+						</td>
+					</tr>
+				<?php endforeach; ?>
+			</table>
+
+		<?php endif; ?>
+
 		<?php submit_button(); ?>
 	</form>
 </div>

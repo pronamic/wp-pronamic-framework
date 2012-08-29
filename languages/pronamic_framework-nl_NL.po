@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pronamic Framework\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-19 13:39+0100\n"
-"PO-Revision-Date: 2012-07-19 13:39+0100\n"
+"POT-Creation-Date: 2012-08-29 16:53+0100\n"
+"PO-Revision-Date: 2012-08-29 16:53+0100\n"
 "Last-Translator: Remco Tolsma <remco@pronamic.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "MIME-Version: 1.0\n"
@@ -75,8 +75,8 @@ msgid "Actions"
 msgstr "Acties"
 
 #: admin/settings.php:5
-#: classes/Pronamic_Framework.php:81
-#: classes/Pronamic_Framework.php:82
+#: classes/Pronamic_Framework.php:107
+#: classes/Pronamic_Framework.php:108
 msgid "Pronamic"
 msgstr "Pronamic"
 
@@ -106,6 +106,22 @@ msgstr "Wachtwoord vergeten pagina"
 #: admin/settings.php:71
 msgid "Edit Post Page"
 msgstr "Bewerk bericht pagina"
+
+#: admin/settings.php:88
+msgid "HTML"
+msgstr "HTML"
+
+#: admin/settings.php:94
+msgid "Head"
+msgstr "Head"
+
+#: admin/settings.php:102
+msgid "Footer"
+msgstr "Footer"
+
+#: admin/settings.php:117
+msgid "Post Type Descriptions"
+msgstr "Bericht type beschrijvingen"
 
 #: shortcodes/shortcode-lostpassword-form.php:24
 msgid "Check your e-mail for the confirmation link."
@@ -160,54 +176,54 @@ msgstr "Pronamic blok"
 msgid "Block:"
 msgstr "Blok:"
 
-#: classes/Pronamic_Framework.php:115
+#: classes/Pronamic_Framework.php:141
 msgctxt "post type general name"
 msgid "Blocks"
 msgstr "Blokken"
 
-#: classes/Pronamic_Framework.php:116
+#: classes/Pronamic_Framework.php:142
 msgctxt "post type singular name"
 msgid "Block"
 msgstr "Blok"
 
-#: classes/Pronamic_Framework.php:117
+#: classes/Pronamic_Framework.php:143
 msgctxt "block"
 msgid "Add New"
 msgstr "Nieuw blok"
 
-#: classes/Pronamic_Framework.php:118
+#: classes/Pronamic_Framework.php:144
 msgid "Add New Block"
 msgstr "Nieuw blok toevoegen"
 
-#: classes/Pronamic_Framework.php:119
+#: classes/Pronamic_Framework.php:145
 msgid "Edit Block"
 msgstr "Blok wijzigen"
 
-#: classes/Pronamic_Framework.php:120
+#: classes/Pronamic_Framework.php:146
 msgid "New Block"
 msgstr "Nieuw blok"
 
-#: classes/Pronamic_Framework.php:121
+#: classes/Pronamic_Framework.php:147
 msgid "View Block"
 msgstr "Bekijk blok"
 
-#: classes/Pronamic_Framework.php:122
+#: classes/Pronamic_Framework.php:148
 msgid "Search Blocks"
 msgstr "Blokken zoeken"
 
-#: classes/Pronamic_Framework.php:123
+#: classes/Pronamic_Framework.php:149
 msgid "No blocks found"
 msgstr "Geen blokken gevonden"
 
-#: classes/Pronamic_Framework.php:124
+#: classes/Pronamic_Framework.php:150
 msgid "No blocks found in Trash"
 msgstr "Geen blokken gevonden in prullenbak"
 
-#: classes/Pronamic_Framework.php:125
+#: classes/Pronamic_Framework.php:151
 msgid "Parent Block:"
 msgstr "Bovenliggende blok:"
 
-#: classes/Pronamic_Framework.php:126
+#: classes/Pronamic_Framework.php:152
 msgid "Blocks"
 msgstr "Blokken"
 
@@ -258,9 +274,6 @@ msgstr "Blokken"
 
 #~ msgid "T: %s"
 #~ msgstr "T: %s"
-
-#~ msgid "Description"
-#~ msgstr "Beschrijving"
 
 #~ msgid "Latitude"
 #~ msgstr "Breedtegraad"

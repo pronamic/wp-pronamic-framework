@@ -87,6 +87,14 @@ class Pronamic_Framework {
 
 		register_setting('pronamic-framework', 'pronamic_framework_html_head');
 		register_setting('pronamic-framework', 'pronamic_framework_html_footer');
+
+		$post_types = get_post_types();
+
+		foreach ( $post_types as $post_type ) {
+			$name = 'pronamic_framework_post_type_description_' . $post_type;
+
+			register_setting( 'pronamic-framework', $name );
+		}
 	}
 
 	//////////////////////////////////////////////////
