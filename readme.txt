@@ -4,7 +4,7 @@ Tags: pronamic, framework
 Donate link: http://pronamic.eu/donate/?for=wp-plugin-pronamic-framework&source=wp-plugin-readme-txt
 Requires at least: 3.0
 Tested up to: 3.2
-Stable tag: 1.4.2
+Stable tag: 1.4.3
 
 This plugin contains some handy WordPress functions and extends the WordPress admin 
 interface with some nice functions, widgets and more.
@@ -102,6 +102,11 @@ WordPress installation and then activate the Plugin from Plugins page.
 
 
 == Changelog ==
+
+= 1.4.3 =
+*	Added field for custom head HTML
+*	Added field for custom footer HTML
+*	Added fields for post typ descriptions (can be used on archive page)
 
 = 1.4.2 =
 *	Fix logout page if no logout page is selected
