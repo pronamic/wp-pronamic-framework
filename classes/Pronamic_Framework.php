@@ -26,26 +26,25 @@ class Pronamic_Framework {
 	/**
 	 * Bootstrap this plugin
 	 */
-	public static function bootstrap($file) {
+	public static function bootstrap( $file ) {
 		self::$file = $file;
 
 		// Actions
-		add_action('init', array(__CLASS__, 'initialize'));
+		add_action( 'init',       array( __CLASS__, 'init' ) );
 		
-		add_action( 'wp_head'  , array( __CLASS__ , 'wp_head' ) );
-		add_action( 'wp_footer', array( __CLASS__ , 'wp_footer'  ) );
+		add_action( 'wp_head',    array( __CLASS__ , 'wp_head' ) );
+		add_action( 'wp_footer',  array( __CLASS__ , 'wp_footer'  ) );
 		
-		add_action('admin_init', array(__CLASS__, 'adminInitialize'));
+		add_action( 'admin_init', array( __CLASS__, 'admin_init' ) );
+		add_action( 'admin_menu', array( __CLASS__, 'admin_menu' ) );
 
-		add_action('admin_menu', array(__CLASS__, 'adminMenu'));
+		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'admin_enqueue_scripts' ) );
 
-		add_action('admin_enqueue_scripts', array(__CLASS__, 'adminEnqueueScripts'));
+		add_action( 'wp_print_styles',   array( __CLASS__, 'print_styles' ) );
 
-		add_action('wp_print_styles', array(__CLASS__, 'printStyles'));
-
-		add_action('widgets_init', array(__CLASS__, 'initializeWidgets'));
+		add_action( 'widgets_init',      array( __CLASS__, 'widgets_init' ) );
 		
-		add_action('template_redirect', array(__CLASS__, 'maybeLogout'));
+		add_action( 'template_redirect', array( __CLASS__, 'maybe_logout' ) );
 	}
 
 	//////////////////////////////////////////////////
@@ -53,14 +52,14 @@ class Pronamic_Framework {
 	/**
 	 * Initialize the plugin
 	 */
-	public static function initialize() {
+	public static function init() {
 		// Load plugin text domain
-		$relPath = dirname(plugin_basename(self::$file)) . '/languages/';
+		$rel_path = dirname( plugin_basename( self::$file ) ) . '/languages/';
 
-		load_plugin_textdomain('pronamic_framework', false, $relPath);
+		load_plugin_textdomain( 'pronamic_framework', false, $rel_path );
 
 		// Register post types
-		self::registerPostTypeBlock();
+		self::register_post_type_block();
 	}
 
 	//////////////////////////////////////////////////
@@ -78,7 +77,7 @@ class Pronamic_Framework {
 	/**
 	 * Admin initialize
 	 */
-	public static function adminInitialize() {
+	public static function admin_init() {
 		// Settings
 		register_setting( 'pronamic-framework', 'pronamic_framework_login_page_id' );
 		register_setting( 'pronamic-framework', 'pronamic_framework_logout_page_id' );
@@ -102,7 +101,7 @@ class Pronamic_Framework {
 	/**
 	 * Admin menu
 	 */
-	public static function adminMenu() {
+	public static function admin_menu() {
 		add_options_page(
 			__( 'Pronamic', 'pronamic_framework' ) , // page_title
 			__( 'Pronamic', 'pronamic_framework' ) , // menu_title 
@@ -118,7 +117,7 @@ class Pronamic_Framework {
 	 * Options page
 	 */
 	public static function optionsPage() {
-		include plugin_dir_path(Pronamic_Framework::$file) . '/admin/settings.php';
+		include plugin_dir_path( Pronamic_Framework::$file ) . '/admin/settings.php';
 	}
 
 	//////////////////////////////////////////////////
@@ -126,8 +125,8 @@ class Pronamic_Framework {
 	/**
 	 * Initialize widgets
 	 */
-	public static function initializeWidgets() {
-		register_widget('Pronamic_Block_Widget');
+	public static function widgets_init() {
+		register_widget( 'Pronamic_Block_Widget' );
 	}
 
 	//////////////////////////////////////////////////
@@ -135,7 +134,7 @@ class Pronamic_Framework {
 	/**
 	 * Register post type block
 	 */
-	public static function registerPostTypeBlock() {
+	public static function register_post_type_block() {
 		register_post_type('pronamic_block', array(
 			'labels' => array(
 				'name' => _x('Blocks', 'post type general name', 'pronamic_framework') , 
@@ -171,15 +170,15 @@ class Pronamic_Framework {
 	/**
 	 * Admin enqueue scripts
 	 */
-	public static function adminEnqueueScripts() {
-		wp_enqueue_style('pronamic-framework', plugins_url('/assets/css/admin.css', self::$file));
+	public static function admin_enqueue_scripts() {
+		wp_enqueue_style( 'pronamic-framework', plugins_url( '/assets/css/admin.css', self::$file ) );
 	}
 
 	/**
 	 * Print the styles
 	 */
-	public static function printStyles() {
-		wp_enqueue_style('pronamic-framework' , plugins_url('/style.css', self::$file)  );
+	public static function print_styles() {
+		wp_enqueue_style( 'pronamic-framework' , plugins_url( '/style.css', self::$file ) );
 	}
 
 	////////////////////////////////////////////////////////////
@@ -187,15 +186,15 @@ class Pronamic_Framework {
 	/**
 	 * Logout
 	 */
-	public static function maybeLogout() {
-		$page_id = get_option('pronamic_framework_logout_page_id');
+	public static function maybe_logout() {
+		$page_id = get_option( 'pronamic_framework_logout_page_id' );
 
-		if( ! empty( $page_id ) && is_page( $page_id ) ) {
+		if ( ! empty( $page_id ) && is_page( $page_id ) ) {
 			wp_logout();
 
 			$redirect_to = filter_input( INPUT_GET, 'redirect_to', FILTER_SANITIZE_STRING );
 
-			if( empty( $redirect_to ) ) {
+			if ( empty( $redirect_to ) ) {
 				$redirect_to = site_url();
 			}
 			
