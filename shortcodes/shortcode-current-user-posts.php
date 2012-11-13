@@ -77,7 +77,9 @@ function pronamic_framework_get_edit_post_link( $url, $post_id, $context ) {
 			$link = get_permalink( $edit_post_page_id );
 
 			if ( $link ) {
-				$url = add_query_arg( 'post', $post_id, $link );
+				$key = get_option( 'pronamic_framework_edit_post_id_key', __( 'post', 'pronamic_framework' ) );
+
+				$url = add_query_arg( $key, $post_id, $link );
 			}
 		}
 	}
