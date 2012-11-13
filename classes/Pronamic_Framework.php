@@ -78,22 +78,189 @@ class Pronamic_Framework {
 	 * Admin initialize
 	 */
 	public static function admin_init() {
+		// Settings - Pages
+		add_settings_section(
+			'pronamic_framework_pages', // id
+			__( 'Pages', 'pronamic_framework' ), // title
+			array( __CLASS__, 'settings_section' ), // callback
+			'pronamic_framework' // page
+		);
+	
+		add_settings_field( 
+			'pronamic_framework_login_page_id', // id
+			__( 'Login Page', 'pronamic_companies' ), // title
+			array( __CLASS__, 'input_page' ),  // callback
+			'pronamic_framework', // page
+			'pronamic_framework_pages', // section 
+			array( 'label_for' => 'pronamic_framework_login_page_id' ) // args 
+		);
+	
+		add_settings_field( 
+			'pronamic_framework_logout_page_id', // id
+			__( 'Logout Page', 'pronamic_companies' ), // title
+			array( __CLASS__, 'input_page' ),  // callback
+			'pronamic_framework', // page
+			'pronamic_framework_pages', // section 
+			array( 'label_for' => 'pronamic_framework_logout_page_id' ) // args 
+		);
+	
+		add_settings_field( 
+			'pronamic_framework_lostpassword_page_id', // id
+			__( 'Lost Password Page', 'pronamic_companies' ), // title
+			array( __CLASS__, 'input_page' ),  // callback
+			'pronamic_framework', // page
+			'pronamic_framework_pages', // section 
+			array( 'label_for' => 'pronamic_framework_lostpassword_page_id' ) // args 
+		);
+	
+		add_settings_field( 
+			'pronamic_framework_edit_post_page_id', // id
+			__( 'Edit Post Page', 'pronamic_companies' ), // title
+			array( __CLASS__, 'input_page' ),  // callback
+			'pronamic_framework', // page
+			'pronamic_framework_pages', // section 
+			array( 'label_for' => 'pronamic_framework_edit_post_page_id' ) // args 
+		);
+	
+		add_settings_field( 
+			'pronamic_framework_edit_post_key', // id
+			__( 'Edit Post Key', 'pronamic_companies' ), // title
+			array( __CLASS__, 'input_text' ),  // callback
+			'pronamic_framework', // page
+			'pronamic_framework_pages', // section 
+			array( 'label_for' => 'pronamic_framework_edit_post_page_id' ) // args 
+		);
+
+		// Settings - HTML
+		add_settings_section(
+			'pronamic_framework_html', // id
+			__( 'HTML', 'pronamic_framework' ), // title
+			array( __CLASS__, 'settings_section' ), // callback
+			'pronamic_framework' // page
+		);
+	
+		add_settings_field( 
+			'pronamic_framework_html_head', // id
+			__( 'Head', 'pronamic_companies' ), // title
+			array( __CLASS__, 'input_textarea' ),  // callback
+			'pronamic_framework', // page
+			'pronamic_framework_html', // section 
+			array( 'label_for' => 'pronamic_framework_html_head' ) // args 
+		);
+	
+		add_settings_field( 
+			'pronamic_framework_html_footer', // id
+			__( 'Footer', 'pronamic_companies' ), // title
+			array( __CLASS__, 'input_textarea' ),  // callback
+			'pronamic_framework', // page
+			'pronamic_framework_html', // section 
+			array( 'label_for' => 'pronamic_framework_html_footer' ) // args 
+		);
+		
+		// Settings - Post type descriptions
+		$post_types = get_post_types( array(), 'objects' );
+
+		if ( ! empty( $post_types ) ) {
+			add_settings_section(
+				'pronamic_framework_post_type_descriptions', // id
+				__( 'Post Type Descriptions', 'pronamic_framework' ), // title
+				array( __CLASS__, 'settings_section' ), // callback
+				'pronamic_framework' // page
+			);
+	
+			foreach ( $post_types as $post_type ) {
+				$name = 'pronamic_framework_post_type_description_' . $post_type->name;
+
+				add_settings_field( 
+					$name, // id
+					isset( $post_type->label ) ? $post_type->label : $post_type->name, // title
+					array( __CLASS__, 'input_wp_editor' ),  // callback
+					'pronamic_framework', // page
+					'pronamic_framework_post_type_descriptions', // section 
+					array( 'label_for' => $name ) // args 
+				);
+			}
+		}
+
 		// Settings
-		register_setting( 'pronamic-framework', 'pronamic_framework_login_page_id' );
-		register_setting( 'pronamic-framework', 'pronamic_framework_logout_page_id' );
-		register_setting( 'pronamic-framework', 'pronamic_framework_lostpassword_page_id' );
-		register_setting( 'pronamic-framework', 'pronamic_framework_edit_post_page_id' );
+		register_setting( 'pronamic_framework', 'pronamic_framework_login_page_id' );
+		register_setting( 'pronamic_framework', 'pronamic_framework_logout_page_id' );
+		register_setting( 'pronamic_framework', 'pronamic_framework_lostpassword_page_id' );
+		register_setting( 'pronamic_framework', 'pronamic_framework_edit_post_page_id' );
 
-		register_setting( 'pronamic-framework', 'pronamic_framework_html_head' );
-		register_setting( 'pronamic-framework', 'pronamic_framework_html_footer' );
-
-		$post_types = get_post_types();
+		register_setting( 'pronamic_framework', 'pronamic_framework_html_head' );
+		register_setting( 'pronamic_framework', 'pronamic_framework_html_footer' );
 
 		foreach ( $post_types as $post_type ) {
-			$name = 'pronamic_framework_post_type_description_' . $post_type;
+			$name = 'pronamic_framework_post_type_description_' . $post_type->name;
 
-			register_setting( 'pronamic-framework', $name );
+			register_setting( 'pronamic_framework', $name );
 		}
+	}
+
+	//////////////////////////////////////////////////
+
+	/**
+	 * Settings section
+	 */
+	public static function settings_section() {
+		
+	}
+
+	/**
+	 * Input text
+	 * 
+	 * @param array $args
+	 */
+	public static function input_text( $args ) {
+		printf(
+			'<input name="%s" id="%s" type="text" value="%s" class="%s" />', 
+			esc_attr( $args['label_for'] ),
+			esc_attr( $args['label_for'] ),
+			esc_attr( get_option( $args['label_for'] ) ),
+			'regular-text code'
+		);
+	}
+
+	/**
+	 * Input text
+	 * 
+	 * @param array $args
+	 */
+	public static function input_textarea( $args ) {
+		printf(
+			'<textarea name="%s" id="%s" class="%s" rows="10" cols="60">%s</textarea>', 
+			esc_attr( $args['label_for'] ),
+			esc_attr( $args['label_for'] ),
+			'regular-text code',
+			esc_textarea( get_option( $args['label_for'] ) )
+		);
+	}
+
+	/**
+	 * Input page
+	 * 
+	 * @param array $args
+	 */
+	public static function input_page( $args ) {
+		$name = $args['label_for'];
+
+		wp_dropdown_pages( array(
+			'name'             => $name,
+			'selected'         => get_option( $name, '' ),
+			'show_option_none' => __( '&mdash; Select a page &mdash;', 'pronamic_companies' ) 
+		) );
+	}
+
+	/**
+	 * Input WordPress editor
+	 * 
+	 * @param array $args
+	 */
+	public static function input_wp_editor( $args ) {
+		$name = $args['label_for'];
+
+		wp_editor( get_option( $name, '' ), $name );
 	}
 
 	//////////////////////////////////////////////////
@@ -106,8 +273,8 @@ class Pronamic_Framework {
 			__( 'Pronamic', 'pronamic_framework' ) , // page_title
 			__( 'Pronamic', 'pronamic_framework' ) , // menu_title 
 			'manage_options' , // capability 
-			'pronamic-framework' , // menu_slug
-			array( __CLASS__, 'optionsPage' ) // function
+			'pronamic_framework' , // menu_slug
+			array( __CLASS__, 'options_page' ) // function
 		);
 	}
 
@@ -116,7 +283,7 @@ class Pronamic_Framework {
 	/**
 	 * Options page
 	 */
-	public static function optionsPage() {
+	public static function options_page() {
 		include plugin_dir_path( Pronamic_Framework::$file ) . '/admin/settings.php';
 	}
 
@@ -171,14 +338,14 @@ class Pronamic_Framework {
 	 * Admin enqueue scripts
 	 */
 	public static function admin_enqueue_scripts() {
-		wp_enqueue_style( 'pronamic-framework', plugins_url( '/assets/css/admin.css', self::$file ) );
+		wp_enqueue_style( 'pronamic_framework', plugins_url( '/assets/css/admin.css', self::$file ) );
 	}
 
 	/**
 	 * Print the styles
 	 */
 	public static function print_styles() {
-		wp_enqueue_style( 'pronamic-framework' , plugins_url( '/style.css', self::$file ) );
+		wp_enqueue_style( 'pronamic_framework' , plugins_url( '/style.css', self::$file ) );
 	}
 
 	////////////////////////////////////////////////////////////
