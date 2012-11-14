@@ -36,7 +36,14 @@ function pronamic_framework_current_user_posts( $atts, $content = null ) {
 		// Template
 		ob_start();
 		
-		$template = plugin_dir_path( Pronamic_Framework::$file ) . '/templates/current-user-posts.php';
+		$templates = array();
+		$templates[] = 'pronamic-current-user-posts.php';
+
+		$template = locate_template( $templates );
+
+		if ( !$template ) {
+			$template = plugin_dir_path( Pronamic_Framework::$file ) . '/templates/current-user-posts.php';
+		}
 
 		load_template( $template, false );
 		
