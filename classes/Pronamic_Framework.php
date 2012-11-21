@@ -355,7 +355,7 @@ class Pronamic_Framework {
 	 * Admin enqueue scripts
 	 */
 	public static function admin_enqueue_scripts() {
-		// This stylesheet is required on all admin pages, because of the admin menu icon
+		// This stylesheet is required on all admin pages because of the admin menu icon
 		wp_enqueue_style( 'pronamic_framework', plugins_url( '/assets/css/admin.css', self::$file ) );
 	}
 
