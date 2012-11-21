@@ -64,10 +64,16 @@ class Pronamic_Framework {
 
 	//////////////////////////////////////////////////
 
+	/**
+	 * Head
+	 */
 	public static function wp_head() {
 		echo get_option( 'pronamic_framework_html_head' );
 	}
 
+	/**
+	 * Footer
+	 */
 	public static function wp_footer() {
 		echo get_option( 'pronamic_framework_html_footer' );
 	}
@@ -313,34 +319,34 @@ class Pronamic_Framework {
 	 * Register post type block
 	 */
 	public static function register_post_type_block() {
-		register_post_type('pronamic_block', array(
+		register_post_type( 'pronamic_block', array(
 			'labels' => array(
-				'name' => _x('Blocks', 'post type general name', 'pronamic_framework') , 
-				'singular_name' => _x('Block', 'post type singular name', 'pronamic_framework') , 
-				'add_new' => _x('Add New', 'block', 'pronamic_framework') , 
-				'add_new_item' => __('Add New Block', 'pronamic_framework') , 
-				'edit_item' => __('Edit Block', 'pronamic_framework') , 
-				'new_item' => __('New Block', 'pronamic_framework') , 
-				'view_item' => __('View Block', 'pronamic_framework') , 
-				'search_items' => __('Search Blocks', 'pronamic_framework') , 
-				'not_found' =>  __('No blocks found', 'pronamic_framework') , 
-				'not_found_in_trash' => __('No blocks found in Trash', 'pronamic_framework') , 
-				'parent_item_colon' => __('Parent Block:', 'pronamic_framework') ,
-				'menu_name' => __('Blocks', 'pronamic_framework') , 
+				'name'               => _x( 'Blocks', 'post type general name', 'pronamic_framework' ),
+				'singular_name'      => _x( 'Block', 'post type singular name', 'pronamic_framework' ),
+				'add_new'            => _x( 'Add New', 'block', 'pronamic_framework' ),
+				'add_new_item'       => __( 'Add New Block', 'pronamic_framework' ),
+				'edit_item'          => __( 'Edit Block', 'pronamic_framework' ),
+				'new_item'           => __( 'New Block', 'pronamic_framework' ),
+				'view_item'          => __( 'View Block', 'pronamic_framework' ),
+				'search_items'       => __( 'Search Blocks', 'pronamic_framework' ),
+				'not_found'          => __( 'No blocks found', 'pronamic_framework' ),
+				'not_found_in_trash' => __( 'No blocks found in Trash', 'pronamic_framework' ),
+				'parent_item_colon'  => __( 'Parent Block:', 'pronamic_framework' ),
+				'menu_name'          => __( 'Blocks', 'pronamic_framework' ),
 			) , 
-			'public' => false , 
-			'publicly_queryable' => false , 
-			'show_ui' => true , 
-			'show_in_menu' => true ,  
-			'query_var' => true , 
-			'rewrite' => true , 
-			'capability_type' => 'page' , 
-			'has_archive' => false , 
-			'hierarchical' => true , 
-			'menu_position' => null , 
+			'public'             => false,
+			'publicly_queryable' => false,
+			'show_ui'            => true,
+			'show_in_menu'       => true,
+			'query_var'          => true,
+			'rewrite'            => true,
+			'capability_type'    => 'page',
+			'has_archive'        => false,
+			'hierarchical'       => true,
+			'menu_position'      => null,
 			// 'menu_icon' =>  plugins_url('/admin/icons/block.png', self::$file) ,
-			'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt')
-		));
+			'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' )
+		) );
 	}
 
 	////////////////////////////////////////////////////////////
@@ -349,6 +355,7 @@ class Pronamic_Framework {
 	 * Admin enqueue scripts
 	 */
 	public static function admin_enqueue_scripts() {
+		// This stylesheet is required on all admin pages, because of the admin menu icon
 		wp_enqueue_style( 'pronamic_framework', plugins_url( '/assets/css/admin.css', self::$file ) );
 	}
 
