@@ -26,7 +26,7 @@
     					"media-upload.php" + "?" + $.param({
     						post_id: "" , 
     						// tab: "library" , 
-    						type: "file" , 
+    						// type: "file" , 
     						TB_iframe: "true" 
     					})
     				);
