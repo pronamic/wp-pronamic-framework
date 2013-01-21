@@ -110,6 +110,7 @@ WordPress installation and then activate the Plugin from Plugins page.
 
 = 1.4.4 =
 *	Added shortcode for an terms index.
+*	Improved Pronamic Block widget for WPML
 
 = 1.4.3 =
 *	Added field for custom head HTML
