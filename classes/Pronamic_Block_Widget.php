@@ -88,15 +88,23 @@ class Pronamic_Block_Widget extends WP_Widget {
 		return $instance;
 	}
 
-	function widget($arguments, $instance) {
+	function widget( $arguments, $instance ) {
 		global $post;
 
-		extract($arguments);
+		extract( $arguments );
+		
+		$post_id   = $instance['post_id'];
+		$post_type = 'pronamic_block';
+		
+		// WPML @see http://wpml.org/documentation/support/creating-multilingual-wordpress-themes/language-dependent-ids/
+		if ( function_exists( 'icl_object_id' ) ) {
+			$post_id = icl_object_id( $post_id, $post_type );
+		}
 
 		$query = new WP_Query();
 		$query->query( array(
-			'p'              => $instance['post_id'],
-			'post_type'      => 'pronamic_block',
+			'p'              => $post_id,
+			'post_type'      => $post_type,
 			'posts_per_page' => -1
 		) );
 
@@ -114,7 +122,7 @@ class Pronamic_Block_Widget extends WP_Widget {
 
 			$template = locate_template( $templates );
 
-			if ( !$template ) {
+			if ( ! $template ) {
 				$template = __DIR__ . '/pronamic-block-widget.php';
 			}
 
