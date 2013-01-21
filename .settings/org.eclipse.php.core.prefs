@@ -1,3 +1,4 @@
-#Mon Mar 14 09:56:47 CET 2011
 eclipse.preferences.version=1
 include_path=0;/pronamic-framework
+phpVersion=php5.3
+useShortTags=false
