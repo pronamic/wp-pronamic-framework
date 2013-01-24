@@ -98,14 +98,13 @@ class Pronamic_Block_Widget extends WP_Widget {
 		
 		// WPML @see http://wpml.org/documentation/support/creating-multilingual-wordpress-themes/language-dependent-ids/
 		if ( function_exists( 'icl_object_id' ) ) {
-			$post_id = icl_object_id( $post_id, $post_type );
+			$post_id = icl_object_id( $post_id, $post_type, false );
 		}
 
-		$query = new WP_Query();
-		$query->query( array(
+		$query = new WP_Query( array(
 			'p'              => $post_id,
 			'post_type'      => $post_type,
-			'posts_per_page' => -1
+			'posts_per_page' => 1
 		) );
 
 		echo $before_widget;
