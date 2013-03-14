@@ -122,7 +122,7 @@ class Pronamic_Block_Widget extends WP_Widget {
 			$template = locate_template( $templates );
 
 			if ( ! $template ) {
-				$template = __DIR__ . '/pronamic-block-widget.php';
+				$template = dirname( Pronamic_Framework::$file ) . '/pronamic-block-widget.php';
 			}
 
 			if ( is_file( $template ) ) {
