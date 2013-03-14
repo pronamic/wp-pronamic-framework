@@ -45,21 +45,18 @@ class Pronamic_Block_Widget extends WP_Widget {
 		</p>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'post_id' ); ?>">
-				<?php _e(' Block:', 'pronamic_framework' ); ?>
+				<?php _e( 'Block:', 'pronamic_framework' ); ?>
 
           		<select class="widefat" id="<?php echo $this->get_field_id( 'post_id' ); ?>" name="<?php echo $this->get_field_name( 'post_id' ); ?>">
 
 					<?php 
 				
-					$query = new WP_Query();
-					$query->query(
-						array(
-							'post_type'      => 'pronamic_block',
-							'posts_per_page' => -1
-						)
-					);
+					$query = new WP_Query( array(
+						'post_type'      => 'pronamic_block',
+						'posts_per_page' => -1
+					) );
 
-					if ( $query->have_posts()) while( $query->have_posts() ) {
+					if ( $query->have_posts() ) while ( $query->have_posts() ) {
 						$query->the_post();
 
 						$extra = '';
@@ -98,7 +95,11 @@ class Pronamic_Block_Widget extends WP_Widget {
 		
 		// WPML @see http://wpml.org/documentation/support/creating-multilingual-wordpress-themes/language-dependent-ids/
 		if ( function_exists( 'icl_object_id' ) ) {
-			$post_id = icl_object_id( $post_id, $post_type, false );
+			global $sitepress_settings;
+
+			if ( isset( $sitepress_settings, $sitepress_settings['custom_posts_sync_option'], $sitepress_settings['custom_posts_sync_option']['pronamic_block'] ) && $sitepress_settings['custom_posts_sync_option']['pronamic_block'] ) {
+				$post_id = icl_object_id( $post_id, $post_type, false );
+			}
 		}
 
 		$query = new WP_Query( array(
