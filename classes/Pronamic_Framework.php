@@ -139,6 +139,22 @@ class Pronamic_Framework {
 				'label_for'   => 'pronamic_framework_edit_post_id_key' 
 			) 
 		);
+		
+		add_settings_section(
+			'pronamic_framework_comment_form'
+			, __( 'Comment Form', 'pronamic_framework' )
+			, array( __CLASS__, 'settings_section' )
+			, 'pronamic_framework'
+		);
+		
+		add_settings_field(
+			'pronamic_framework_comment_form_before_text'
+			, __( 'Before comment form text', 'pronamic_framework' )
+			, array( __CLASS__, 'input_wp_editor' )
+			, 'pronamic_framework'
+			, 'pronamic_framework_comment_form'
+			, array( 'label_for' => 'pronamic_framework_comment_form_before_text' )
+		);
 
 		// Settings - HTML
 		add_settings_section(
@@ -200,6 +216,8 @@ class Pronamic_Framework {
 
 		register_setting( 'pronamic_framework', 'pronamic_framework_html_head' );
 		register_setting( 'pronamic_framework', 'pronamic_framework_html_footer' );
+		
+		register_setting( 'pronamic_framework', 'pronamic_framework_comment_form_before_text' );
 
 		foreach ( $post_types as $post_type ) {
 			$name = 'pronamic_framework_post_type_description_' . $post_type->name;
