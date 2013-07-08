@@ -96,7 +96,7 @@ class Pronamic_Framework {
 
 		add_settings_field(
 			'pronamic_framework_login_page_id', // id
-			__( 'Login Page', 'pronamic_companies' ), // title
+			__( 'Login Page', 'pronamic_framework' ), // title
 			array( __CLASS__, 'input_page' ),  // callback
 			'pronamic_framework', // page
 			'pronamic_framework_pages', // section
@@ -105,7 +105,7 @@ class Pronamic_Framework {
 
 		add_settings_field(
 			'pronamic_framework_logout_page_id', // id
-			__( 'Logout Page', 'pronamic_companies' ), // title
+			__( 'Logout Page', 'pronamic_framework' ), // title
 			array( __CLASS__, 'input_page' ),  // callback
 			'pronamic_framework', // page
 			'pronamic_framework_pages', // section
@@ -114,7 +114,7 @@ class Pronamic_Framework {
 
 		add_settings_field(
 			'pronamic_framework_lostpassword_page_id', // id
-			__( 'Lost Password Page', 'pronamic_companies' ), // title
+			__( 'Lost Password Page', 'pronamic_framework' ), // title
 			array( __CLASS__, 'input_page' ),  // callback
 			'pronamic_framework', // page
 			'pronamic_framework_pages', // section
@@ -123,7 +123,7 @@ class Pronamic_Framework {
 
 		add_settings_field(
 			'pronamic_framework_edit_post_page_id', // id
-			__( 'Edit Post Page', 'pronamic_companies' ), // title
+			__( 'Edit Post Page', 'pronamic_framework' ), // title
 			array( __CLASS__, 'input_page' ),  // callback
 			'pronamic_framework', // page
 			'pronamic_framework_pages', // section
@@ -132,7 +132,7 @@ class Pronamic_Framework {
 
 		add_settings_field(
 			'pronamic_framework_edit_post_id_key', // id
-			__( 'Edit Post ID Key', 'pronamic_companies' ), // title
+			__( 'Edit Post ID Key', 'pronamic_framework' ), // title
 			array( __CLASS__, 'input_text' ),  // callback
 			'pronamic_framework', // page
 			'pronamic_framework_pages', // section
