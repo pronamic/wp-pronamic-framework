@@ -12,7 +12,6 @@ License: GPL
 
 require_once 'classes/Pronamic_Block_Widget.php';
 require_once 'classes/Pronamic_Framework.php';
-require_once 'classes/Pronamic_Comment_Form.php';
 require_once 'shortcodes/shortcode-login-form.php';
 require_once 'shortcodes/shortcode-lostpassword-form.php';
 require_once 'shortcodes/shortcode-current-user-posts.php';
@@ -21,5 +20,9 @@ require_once 'shortcodes/shortcode-terms-index.php';
 require_once 'functions/media-select.php';
 require_once 'functions/user-image-template.php';
 require_once 'functions/user-image.php';
+
+global $ponamic_framework_plugin;
+
+$ponamic_framework_plugin = new Pronamic_Framework( __FILE__ );
 
 Pronamic_Framework::bootstrap( __FILE__ );
