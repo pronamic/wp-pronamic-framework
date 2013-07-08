@@ -354,7 +354,7 @@ class Pronamic_Framework {
 				'not_found_in_trash' => __( 'No blocks found in Trash', 'pronamic_framework' ),
 				'parent_item_colon'  => __( 'Parent Block:', 'pronamic_framework' ),
 				'menu_name'          => __( 'Blocks', 'pronamic_framework' ),
-			) ,
+			),
 			'public'             => false,
 			'publicly_queryable' => false,
 			'show_ui'            => true,
