@@ -286,7 +286,7 @@ class Pronamic_Framework {
 		wp_dropdown_pages( array(
 			'name'             => $name,
 			'selected'         => get_option( $name, '' ),
-			'show_option_none' => __( '&mdash; Select a page &mdash;', 'pronamic_companies' )
+			'show_option_none' => __( '&mdash; Select a page &mdash;', 'pronamic_framework' )
 		) );
 	}
 
