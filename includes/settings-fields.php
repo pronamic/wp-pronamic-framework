@@ -1,4 +1,11 @@
 <?php
+/**
+ * Settings fields callbacks
+ * https://github.com/pronamic/wp-pronamic-framework/blob/develop/includes/settings-fields.php
+ * 
+ * @package Pronamic Framework
+ * @since 1.5.0
+ */
 
 if ( ! function_exists( 'pronamic_field_wp_editor' ) ) {
 	/**
