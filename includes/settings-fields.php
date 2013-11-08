@@ -7,13 +7,13 @@
  * @since 1.5.0
  */
 
-if ( ! function_exists( 'pronamic_field_wp_editor' ) ) {
+if ( ! function_exists( 'pronamic_field_input_text' ) ) {
 	/**
 	 * Field dropdown pages
 	 * 
 	 * @param array $args
 	 */
-	function pronamic_field_wp_editor( $args ) {
+	function pronamic_field_input_text( $args ) {
 		printf(
 			'<input name="%s" id="%s" type="text" value="%s" class="%s" />',
 			esc_attr( $args['label_for'] ),
@@ -28,6 +28,117 @@ if ( ! function_exists( 'pronamic_field_wp_editor' ) ) {
 				$args['description']
 			);
 		}
+	}
+}
+
+if ( ! function_exists( 'pronamic_field_input_media' ) ) {
+	/**
+	 * Field dropdown pages
+	 * 
+	 * @param array $args
+	 */
+	function pronamic_field_input_media( $args ) {
+		printf(
+			'<input name="%s" id="%s" type="text" value="%s" class="%s" data-frame-title="%s" data-button-text="%s" data-library-type="%s" />',
+			esc_attr( $args['label_for'] ),
+			esc_attr( $args['label_for'] ),
+			esc_attr( get_option( $args['label_for'] ) ),
+			'code pronamic-media-picker',
+			__( 'Select Media', 'pronamic' ),
+			__( 'Select', 'pronamic' ),
+			''
+		);
+
+		?>
+		<script type="text/javascript">
+			( function( $ ) {
+				$( document ).ready( function() {
+					var frame;
+
+					$( '.pronamic-media-picker' ).each( function() {
+						var $this = $( this );
+
+						var selectLink = $( '<a />' ).text( 'Select media' );
+
+						$this.after(selectLink);
+	
+						selectLink.click( function( event ) {
+							var $el = $( this );
+			
+							event.preventDefault();
+			
+							// If the media frame already exists, reopen it.
+							if ( frame ) {
+								frame.open();
+								return;
+							}
+			
+							// Create the media frame.
+							frame = wp.media.frames.projectAgreement = wp.media( {
+								// Set the title of the modal.
+								title: $el.data( 'choose' ),
+			
+								// Tell the modal to show only images.
+								library: {
+									type: $this.data( 'library-type' ),
+								},
+			
+								// Customize the submit button.
+								button: {
+									// Set the text of the button.
+									text: $this.data( 'button-text' ),
+									// Tell the button not to close the modal, since we're
+									// going to refresh the page when the image is selected.
+									close: false
+								}
+							} );
+			
+							// When an image is selected, run a callback.
+							frame.on( 'select', function() {
+								// Grab the selected attachment.
+								var attachment = frame.state().get( 'selection' ).first();
+			
+								$this.val( attachment.id );
+			
+								frame.close();
+							} );
+			
+							// Finally, open the modal.
+							frame.open();
+						} );
+					} );
+				} );
+			} )( jQuery );
+		</script>
+		<?php
+	}
+}
+
+if ( ! function_exists( 'pronamic_field_input_color' ) ) {
+	/**
+	 * Field dropdown pages
+	 * 
+	 * @param array $args
+	 */
+	function pronamic_field_input_color( $args ) {
+		printf(
+			'<input name="%s" id="%s" type="text" value="%s" class="%s" />',
+			esc_attr( $args['label_for'] ),
+			esc_attr( $args['label_for'] ),
+			esc_attr( get_option( $args['label_for'] ) ),
+			'code pronamic-color-picker'
+		);
+
+		wp_enqueue_style( 'wp-color-picker' );
+		wp_enqueue_script( 'wp-color-picker' );
+
+		?>
+		<script type="text/javascript">
+			jQuery( document ).ready( function( $ ) {
+				$( '.pronamic-color-picker' ).wpColorPicker();
+			} );
+		</script>
+		<?php
 	}
 }
 
@@ -99,10 +210,18 @@ if ( ! function_exists( 'pronamic_field_dropdown_gravityforms' ) ) {
 			$form_id = get_option( $name );
 		
 			printf( '<select name="%s" id="%s">', $name, $name );
-			printf( '<option value="%s" %s>%s</option>', '', selected( $form_id, '', false ), '' );
+
+			printf(
+				'<option value="%s" %s>%s</option>', 
+				'',
+				selected( $form_id, '', false ),
+				__( '&mdash; Select a form &mdash;', 'pronamic_framework' )
+			);
+
 			foreach ( $forms as $form ) {
 				printf( '<option value="%s" %s>%s</option>', $form->id, selected( $form_id, $form->id, false ), $form->title );
 			}
+
 			printf( '</select>' );
 		}
 	}
