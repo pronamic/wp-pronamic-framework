@@ -20,6 +20,7 @@ require_once 'shortcodes/shortcode-terms-index.php';
 require_once 'functions/media-select.php';
 require_once 'functions/user-image-template.php';
 require_once 'functions/user-image.php';
+require_once 'includes/settings-fields.php';
 
 global $ponamic_framework_plugin;
 
