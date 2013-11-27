@@ -30,6 +30,7 @@
 					</td>
 					<td>
 						<?php edit_post_link(); ?>
+						<?php delete_post_link(); ?>
 					</td>
 				</tr>
 	

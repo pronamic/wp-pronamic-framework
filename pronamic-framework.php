@@ -17,6 +17,7 @@ require_once 'shortcodes/shortcode-lostpassword-form.php';
 require_once 'shortcodes/shortcode-current-user-posts.php';
 require_once 'shortcodes/shortcode-edit-post-form.php';
 require_once 'shortcodes/shortcode-terms-index.php';
+require_once 'functions/link-template.php';
 require_once 'functions/media-select.php';
 require_once 'functions/user-image-template.php';
 require_once 'functions/user-image.php';
