@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Pronamic Framework\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-11-27 13:51+0100\n"
-"PO-Revision-Date: 2013-11-27 13:52+0100\n"
+"PO-Revision-Date: 2013-11-28 16:25+0100\n"
 "Last-Translator: \n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "Language: nl_NL\n"
@@ -150,7 +150,7 @@ msgstr "Blokken"
 
 #: functions/link-template.php:22
 msgid "Delete This"
-msgstr "Verwijder Dit"
+msgstr "Verwijderen"
 
 #: functions/media-select.php:16
 msgid "Select Media&hellip;"
