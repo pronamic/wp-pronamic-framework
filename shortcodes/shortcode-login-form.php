@@ -129,8 +129,8 @@ function pronamic_framework_shortcode_login_form( $atts, $content = null ) {
 
 	if ( ! is_user_logged_in() ) {
 		$args = array(
-			'redirect_to' => $redirect, 
-			'echo'        => false
+			'redirect_to' => $redirect_to, 
+			'echo'        => false,
 		);
 
 		$result = pronamic_framework_login_form( $args );
