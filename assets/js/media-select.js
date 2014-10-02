@@ -61,7 +61,7 @@
 //http://www.johngadbois.com/adding-your-own-callbacks-to-wordpress-ajax-requests/
 //http://api.jquery.com/category/ajax/global-ajax-event-handlers/
 jQuery(document).ajaxSuccess(function(e, xhr, settings) {
-	if( settings.data.search('action=save-widget') != -1 ) {
+    if ( typeof( settings.data ) !== 'undefined' && settings.data.search( 'action=save-widget' ) != -1 ) {
 		$("input.pronamic-file-select").pronamicWordPressFileSelect();
 	}
 });
