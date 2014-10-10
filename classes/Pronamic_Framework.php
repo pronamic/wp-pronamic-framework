@@ -40,8 +40,6 @@ class Pronamic_Framework {
 
 		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'admin_enqueue_scripts' ) );
 
-		add_action( 'wp_print_styles',   array( __CLASS__, 'print_styles' ) );
-
 		add_action( 'widgets_init',      array( __CLASS__, 'widgets_init' ) );
 
 		add_action( 'template_redirect', array( __CLASS__, 'maybe_logout' ) );
@@ -378,13 +376,6 @@ class Pronamic_Framework {
 	public static function admin_enqueue_scripts() {
 		// This stylesheet is required on all admin pages because of the admin menu icon
 		wp_enqueue_style( 'pronamic_framework', plugins_url( '/assets/css/admin.css', self::$file ) );
-	}
-
-	/**
-	 * Print the styles
-	 */
-	public static function print_styles() {
-		wp_enqueue_style( 'pronamic_framework' , plugins_url( '/style.css', self::$file ) );
 	}
 
 	////////////////////////////////////////////////////////////
