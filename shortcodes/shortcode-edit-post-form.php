@@ -20,23 +20,23 @@ function pronamic_framework_shortcode_edit_post_form($atts, $content = null) {
 				global $wp_query;
 
 				$query = array(
-					'p' => $post_id , 
+					'p' => $post_id ,
 					'post_type' => 'any'
 				);
-		
+
 				$original_query = $wp_query;
 				$wp_query = null;
 				$wp_query = new WP_Query($query);
-		
+
 				// Template
 				ob_start();
 
 				$template = plugin_dir_path(Pronamic_Framework::$file) . '/templates/edit-post-form.php';
 
 				load_template($template, false);
-				
+
 				$result = ob_get_clean();
-		
+
 				// Query end
 				$wp_query = null;
 				$wp_query = $original_query;
@@ -61,17 +61,17 @@ function pronamic_framework_maybe_save_post() {
 		$post_content = wp_kses_post( $post_content );
 
 		$post = array(
-			'ID' => $post_ID , 
-			'post_title' => $post_title , 
+			'ID' => $post_ID ,
+			'post_title' => $post_title ,
 			'post_content' => $post_content
 		);
 
 		$result = wp_update_post( $post );
 
 		if($result !== 0) {
-			
+
 		} else {
-			
+
 		}
 
 		// Meta
@@ -97,18 +97,18 @@ function pronamic_framework_maybe_save_post() {
 					$bits = file_get_contents($tmp_name);
 
 					$result = wp_upload_bits($name, null, $bits);
-	
+
 					if($result['error'] === false) { // no error
 						$file_type = wp_check_filetype($result['file']);
-						
+
 						$keys = array_keys( wp_match_mime_types( array_keys( $post_mime_types ), $file_type ) );
 						$type = array_shift( $keys );
 
 						$attachment = array(
 							'post_title' => $name ,
-							'post_mime_type' => $file_type['type'] , 
-							'guid' => $result['url'] , 
-							'post_parent' => $post_ID 
+							'post_mime_type' => $file_type['type'] ,
+							'guid' => $result['url'] ,
+							'post_parent' => $post_ID
 						);
 
 						$attachment_id = wp_insert_attachment( $attachment, $result['file'], $post_ID );
@@ -116,10 +116,10 @@ function pronamic_framework_maybe_save_post() {
 						$meta_data = wp_generate_attachment_metadata( $attachment_id, $result['file'] );
 
 						$updated = wp_update_attachment_metadata( $attachment_id, $meta_data );
-						
+
 						if($type == 'image') {
-							update_post_meta( $post_ID, '_thumbnail_id', $attachment_id );							
-						} 
+							update_post_meta( $post_ID, '_thumbnail_id', $attachment_id );
+						}
 					}
 				}
 			}
