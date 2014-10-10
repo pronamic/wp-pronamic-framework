@@ -22,7 +22,7 @@ function pronamic_framework_current_user_posts( $atts, $content = null ) {
 		}
 
 		$query_args = wp_parse_args( $query, array(
-			'author'         => $user->ID, 
+			'author'         => $user->ID,
 			'posts_per_page' => -1
 		) );
 
@@ -35,7 +35,7 @@ function pronamic_framework_current_user_posts( $atts, $content = null ) {
 
 		// Template
 		ob_start();
-		
+
 		$templates = array();
 		$templates[] = 'pronamic-current-user-posts.php';
 
@@ -46,7 +46,7 @@ function pronamic_framework_current_user_posts( $atts, $content = null ) {
 		}
 
 		load_template( $template, false );
-		
+
 		$result = ob_get_clean();
 
 		// Query end
@@ -71,7 +71,7 @@ function pronamic_framework_is_current_user_posts() {
 
 /**
  * Get edit post link
- * 
+ *
  * @param string $url
  * @param string $postId
  * @param string $context
