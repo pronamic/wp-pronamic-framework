@@ -2,7 +2,7 @@
 /**
  * Settings fields callbacks
  * https://github.com/pronamic/wp-pronamic-framework/blob/develop/includes/settings-fields.php
- * 
+ *
  * @package Pronamic Framework
  * @since 1.5.0
  */
@@ -10,7 +10,7 @@
 if ( ! function_exists( 'pronamic_field_input_text' ) ) {
 	/**
 	 * Field dropdown pages
-	 * 
+	 *
 	 * @param array $args
 	 */
 	function pronamic_field_input_text( $args ) {
@@ -34,7 +34,7 @@ if ( ! function_exists( 'pronamic_field_input_text' ) ) {
 if ( ! function_exists( 'pronamic_field_input_media' ) ) {
 	/**
 	 * Field dropdown pages
-	 * 
+	 *
 	 * @param array $args
 	 */
 	function pronamic_field_input_media( $args ) {
@@ -61,28 +61,28 @@ if ( ! function_exists( 'pronamic_field_input_media' ) ) {
 						var selectLink = $( '<a />' ).text( 'Select media' );
 
 						$this.after(selectLink);
-	
+
 						selectLink.click( function( event ) {
 							var $el = $( this );
-			
+
 							event.preventDefault();
-			
+
 							// If the media frame already exists, reopen it.
 							if ( frame ) {
 								frame.open();
 								return;
 							}
-			
+
 							// Create the media frame.
 							frame = wp.media.frames.projectAgreement = wp.media( {
 								// Set the title of the modal.
 								title: $el.data( 'choose' ),
-			
+
 								// Tell the modal to show only images.
 								library: {
 									type: $this.data( 'library-type' ),
 								},
-			
+
 								// Customize the submit button.
 								button: {
 									// Set the text of the button.
@@ -92,17 +92,17 @@ if ( ! function_exists( 'pronamic_field_input_media' ) ) {
 									close: false
 								}
 							} );
-			
+
 							// When an image is selected, run a callback.
 							frame.on( 'select', function() {
 								// Grab the selected attachment.
 								var attachment = frame.state().get( 'selection' ).first();
-			
+
 								$this.val( attachment.id );
-			
+
 								frame.close();
 							} );
-			
+
 							// Finally, open the modal.
 							frame.open();
 						} );
@@ -117,7 +117,7 @@ if ( ! function_exists( 'pronamic_field_input_media' ) ) {
 if ( ! function_exists( 'pronamic_field_input_color' ) ) {
 	/**
 	 * Field dropdown pages
-	 * 
+	 *
 	 * @param array $args
 	 */
 	function pronamic_field_input_color( $args ) {
@@ -145,12 +145,12 @@ if ( ! function_exists( 'pronamic_field_input_color' ) ) {
 if ( ! function_exists( 'pronamic_field_dropdown_pages' ) ) {
 	/**
 	 * Field dropdown pages
-	 * 
+	 *
 	 * @param array $args
 	 */
 	function pronamic_field_dropdown_pages( $args ) {
 		$name = $args['label_for'];
-		
+
 		wp_dropdown_pages( array(
 			'name'             => $name,
 			'selected'         => get_option( $name, '' ),
@@ -162,7 +162,7 @@ if ( ! function_exists( 'pronamic_field_dropdown_pages' ) ) {
 if ( ! function_exists( 'pronamic_field_textarea' ) ) {
 	/**
 	 * Field dropdown pages
-	 * 
+	 *
 	 * @param array $args
 	 */
 	function pronamic_field_textarea( $args ) {
@@ -179,12 +179,12 @@ if ( ! function_exists( 'pronamic_field_textarea' ) ) {
 if ( ! function_exists( 'pronamic_field_wp_editor' ) ) {
 	/**
 	 * Field WordPress editor
-	 * 
+	 *
 	 * @param array $args
 	 */
 	function pronamic_field_wp_editor( $args ) {
 		$name = $args['label_for'];
-		
+
 		wp_editor( get_option( $name, '' ), $name );
 	}
 }
@@ -192,27 +192,27 @@ if ( ! function_exists( 'pronamic_field_wp_editor' ) ) {
 if ( ! function_exists( 'pronamic_field_dropdown_gravityforms' ) ) {
 	/**
 	 * Field dropdown Gravity Forms
-	 * 
+	 *
 	 * @param array $args
 	 */
 	function pronamic_field_dropdown_gravityforms( $args) {
 		$name = $args['label_for'];
 
 		$forms = array();
-		
+
 		if ( method_exists( 'RGFormsModel', 'get_forms') ) {
 			$forms = RGFormsModel::get_forms();
 		}
-			
+
 		if ( empty( $forms ) ) {
 			_e( 'You don\'t  have any Gravity Forms forms.', 'pronamic_framework' );
 		} else {
 			$form_id = get_option( $name );
-		
+
 			printf( '<select name="%s" id="%s">', $name, $name );
 
 			printf(
-				'<option value="%s" %s>%s</option>', 
+				'<option value="%s" %s>%s</option>',
 				'',
 				selected( $form_id, '', false ),
 				__( '&mdash; Select a form &mdash;', 'pronamic_framework' )
