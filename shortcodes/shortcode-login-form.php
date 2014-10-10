@@ -8,7 +8,7 @@ function pronamic_framework_maybe_login() {
 	global $pronamic_framework_error, $pronamic_framework_login_form_i;
 
 	// Maybe login
-	if ( ! empty( $_POST['action'] ) && $_POST['action'] == 'log-in' ) {
+	if ( filter_has_var( INPUT_POST, 'action' ) && 'log-in' == filter_input( INPUT_POST, 'action', FILTER_SANITIZE_STRING ) ) {
 		global $pronamic_framework_error;
 
 		$result = wp_signon();
@@ -34,9 +34,9 @@ add_action( 'init', 'pronamic_framework_maybe_login' );
 /**
  * Login form
  */
-function pronamic_framework_login_form($args = '') {
+function pronamic_framework_login_form( $args = '' ) {
 	$args = wp_parse_args( $args, array(
- 		'redirect_to' => ''
+		'redirect_to' => '',
 	) );
 
 	// Output
@@ -47,11 +47,11 @@ function pronamic_framework_login_form($args = '') {
 
 		$output .= '<p class="alert">';
 		$output .= sprintf(
-			__( 'You are currently logged in as <a href="%1$s" title="%2$s">%2$s</a>.', 'pronamic_framework' ), 
+			__( 'You are currently logged in as <a href="%1$s" title="%2$s">%2$s</a>.', 'pronamic_framework' ),
 			get_author_posts_url( $user->ID ),
-			$user->display_name 
+			$user->display_name
 		);
-		$output .= sprintf( '<a href="%s" title="%s">%s</a>', 
+		$output .= sprintf( '<a href="%s" title="%s">%s</a>',
 			esc_attr( wp_logout_url( home_url() ) ),
 			esc_attr__( 'Log out of this account', 'pronamic_framework' ),
 			esc_attr__( 'Log out &raquo;', 'pronamic_framework' )
@@ -60,22 +60,24 @@ function pronamic_framework_login_form($args = '') {
 	} else { // Not logged in
 		global $pronamic_framework_error, $pronamic_framework_login_form_i;
 
-		if ( $pronamic_framework_login_form_i == null ) $pronamic_framework_login_form_i = 1;
+		if ( $pronamic_framework_login_form_i == null ) {
+			$pronamic_framework_login_form_i = 1;
+		}
 
 		$i = $pronamic_framework_login_form_i++;
 
 		$output .= '<form action="" method="post">';
 		$output .= '	<p class="login-form-username">';
 		$output .= '		<label for="log-field-' . $i. '">';
-		$output .= __('Username', 'pronamic_framework');
+		$output .= __( 'Username', 'pronamic_framework' );
 		$output .= '		</label>';
 
 		$output .= '		<input id="log-field-' . $i. '" name="log" type="text" class="text-input" value="' . esc_attr( filter_input( INPUT_POST, 'log', FILTER_SANITIZE_STRING ) ) . '" />';
 		$output .= '	</p>';
- 
+
 		$output .= '	<p class="login-form-password">';
 		$output .= '		<label for="pwd-field-' . $i. '">';
-		$output .= __('Password', 'pronamic_framework');
+		$output .= __( 'Password', 'pronamic_framework' );
 		$output .= '		</label>';
 
 		$output .= '		<input id="pwd-field-' . $i. '" name="pwd" type="password" class="text-input" value="' . esc_attr( filter_input( INPUT_POST, 'pwd', FILTER_SANITIZE_STRING ) ) . '" />';
@@ -124,12 +126,12 @@ function pronamic_framework_shortcode_login_form( $atts, $content = null ) {
 	$result = '';
 
 	extract( shortcode_atts( array(
-		'redirect_to' => null
+		'redirect_to' => null,
 	), $atts ) );
 
 	if ( ! is_user_logged_in() ) {
 		$args = array(
-			'redirect_to' => $redirect_to, 
+			'redirect_to' => $redirect_to,
 			'echo'        => false,
 		);
 
@@ -139,4 +141,4 @@ function pronamic_framework_shortcode_login_form( $atts, $content = null ) {
 	return $result;
 }
 
-add_shortcode('pronamic_login_form', 'pronamic_framework_shortcode_login_form');
+add_shortcode( 'pronamic_login_form', 'pronamic_framework_shortcode_login_form' );
