@@ -6,5 +6,6 @@
 		<exclude name="WordPress.VIP.RestrictedFunctions.user_meta" />
 		<exclude name="WordPress.VIP.PostsPerPage.posts_per_page" />
 		<exclude name="WordPress.WhiteSpace.ScopeIndent.Incorrect" />
+		<exclude name="WordPress.XSS.EscapeOutput." />
 	</rule>
 </ruleset>
