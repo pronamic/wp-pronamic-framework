@@ -32,8 +32,8 @@ class Pronamic_Framework {
 		// Actions
 		add_action( 'init',       array( __CLASS__, 'init' ) );
 
-		add_action( 'wp_head',    array( __CLASS__ , 'wp_head' ) );
-		add_action( 'wp_footer',  array( __CLASS__ , 'wp_footer'  ) );
+		add_action( 'wp_head',    array( __CLASS__, 'wp_head' ) );
+		add_action( 'wp_footer',  array( __CLASS__, 'wp_footer'  ) );
 
 		add_action( 'admin_init', array( __CLASS__, 'admin_init' ) );
 		add_action( 'admin_menu', array( __CLASS__, 'admin_menu' ) );
@@ -138,7 +138,7 @@ class Pronamic_Framework {
 			'pronamic_framework_pages', // section
 			array( // args
 				'description' => sprintf( __( 'Default is <code>%s</code>', 'pronamic_framework' ), __( 'post', 'pronamic_framework' ) ),
-				'label_for'   => 'pronamic_framework_edit_post_id_key'
+				'label_for'   => 'pronamic_framework_edit_post_id_key',
 			)
 		);
 
