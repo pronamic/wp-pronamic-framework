@@ -23,7 +23,7 @@ function pronamic_framework_current_user_posts( $atts, $content = null ) {
 
 		$query_args = wp_parse_args( $query, array(
 			'author'         => $user->ID,
-			'posts_per_page' => -1
+			'posts_per_page' => -1,
 		) );
 
 		// Query start
@@ -41,7 +41,7 @@ function pronamic_framework_current_user_posts( $atts, $content = null ) {
 
 		$template = locate_template( $templates );
 
-		if ( !$template ) {
+		if ( ! $template ) {
 			$template = plugin_dir_path( Pronamic_Framework::$file ) . '/templates/current-user-posts.php';
 		}
 
@@ -80,7 +80,7 @@ function pronamic_framework_get_edit_post_link( $url, $post_id, $context ) {
 	if ( pronamic_framework_is_current_user_posts() ) {
 		$edit_post_page_id = get_option( 'pronamic_framework_edit_post_page_id' );
 
-		if ( !empty( $edit_post_page_id ) ) {
+		if ( ! empty( $edit_post_page_id ) ) {
 			$link = get_permalink( $edit_post_page_id );
 
 			if ( $link ) {
