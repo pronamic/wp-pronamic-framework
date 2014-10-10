@@ -13,21 +13,21 @@ function pronamic_media_select_scripts( $hook_suffix ) {
 		'pronamic-media-select' , // handle
 		'pronamicMediaSelectL10n' , // object name
 		array( // data
-			'selectMediaText' => __( 'Select Media&hellip;', 'pronamic_framework' ) ,
-			'selectText' => __( 'Select', 'pronamic_framework' ) ,
-			'deleteText' =>  __( 'Delete', 'pronamic_framework' ) ,
-			'loadingPreviewText' =>  __( 'Loading preview&hellip;', 'pronamic_framework' ) ,
+			'selectMediaText'    => __( 'Select Media&hellip;', 'pronamic_framework' ),
+			'selectText'         => __( 'Select', 'pronamic_framework' ),
+			'deleteText'         => __( 'Delete', 'pronamic_framework' ),
+			'loadingPreviewText' => __( 'Loading preview&hellip;', 'pronamic_framework' ),
 		)
 	);
 }
 
 add_action( 'admin_enqueue_scripts', 'pronamic_media_select_scripts' );
 
-function pronamic_attachment_fields_to_edit($form_fields, $post) {
+function pronamic_attachment_fields_to_edit( $form_fields, $post ) {
 	$field = sprintf(
 		'<a class="button pronamic-media-select-button" data-post_id="%s">%s</a>' ,
 		$post->ID ,
-		__( 'Select', 'pronamic_framework')
+		__( 'Select', 'pronamic_framework' )
 	);
 
 	$tr  = '';
@@ -39,12 +39,12 @@ function pronamic_attachment_fields_to_edit($form_fields, $post) {
 	$tr .= '	</td>';
 	$tr .= '</tr>';
 
-	$form_fields['pronamic_select_attachment'] =  array('tr' => $tr);
+	$form_fields['pronamic_select_attachment'] = array( 'tr' => $tr );
 
 	return $form_fields;
 }
 
-add_filter('attachment_fields_to_edit', 'pronamic_attachment_fields_to_edit', 50, 2);
+add_filter( 'attachment_fields_to_edit', 'pronamic_attachment_fields_to_edit', 50, 2 );
 
 // Output form button
 function pronamic_media_select_field( $name, $value ) {
@@ -66,13 +66,13 @@ function pronamic_media_select_preview( $id ) {
 			$filetype_check = wp_check_filetype( $attachment_url );
 			$filetype_parts = explode( '/', $filetype_check['type'] );
 
-			return '<a href="' . wp_get_attachment_url( $id ) . '" style="display: block; min-height:32px; padding: 10px 0 0 38px; background: url(' . plugins_url( "img/icon-" . $filetype_parts[1] . ".png", __FILE__ ) . ') no-repeat; font-size: 13px; font-weight: bold;">' . basename( $attachment_url ) . '</a>';
+			return '<a href="' . wp_get_attachment_url( $id ) . '" style="display: block; min-height:32px; padding: 10px 0 0 38px; background: url(' . plugins_url( 'img/icon-' . $filetype_parts[1] . '.png', __FILE__ ) . ') no-repeat; font-size: 13px; font-weight: bold;">' . basename( $attachment_url ) . '</a>';
 		}
 	}
 }
 
 function pronamic_media_select_preview_ajax() {
-	$id = filter_input(INPUT_POST, 'id', FILTER_VALIDATE_INT);
+	$id = filter_input( INPUT_POST, 'id', FILTER_VALIDATE_INT );
 
 	echo pronamic_media_select_preview( $id );
 
