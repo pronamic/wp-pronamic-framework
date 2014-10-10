@@ -2,6 +2,7 @@
 <ruleset name="Pronamic Framework plugin rules">
 	<rule ref="WordPress">
 		<exclude name="WordPress.VIP.RestrictedFunctions.extract" />
+		<exclude name="WordPress.VIP.RestrictedFunctions.file_get_contents" />
 		<exclude name="WordPress.WhiteSpace.ScopeIndent.Incorrect" />
 	</rule>
 </ruleset>
