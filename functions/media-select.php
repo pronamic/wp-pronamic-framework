@@ -4,18 +4,18 @@ function pronamic_media_select_scripts( $hook_suffix ) {
 	wp_enqueue_style( 'thickbox' );
 
 	wp_enqueue_script(
-		'pronamic-media-select' , // handle 
+		'pronamic-media-select' , // handle
 		plugins_url( 'assets/js/media-select.js', Pronamic_Framework::$file ) , // src
 		array( 'jquery', 'media-upload', 'thickbox' ) // dependencies
 	);
-	
+
 	wp_localize_script(
 		'pronamic-media-select' , // handle
 		'pronamicMediaSelectL10n' , // object name
 		array( // data
-			'selectMediaText' => __( 'Select Media&hellip;', 'pronamic_framework' ) , 
-			'selectText' => __( 'Select', 'pronamic_framework' ) , 
-			'deleteText' =>  __( 'Delete', 'pronamic_framework' ) , 
+			'selectMediaText' => __( 'Select Media&hellip;', 'pronamic_framework' ) ,
+			'selectText' => __( 'Select', 'pronamic_framework' ) ,
+			'deleteText' =>  __( 'Delete', 'pronamic_framework' ) ,
 			'loadingPreviewText' =>  __( 'Loading preview&hellip;', 'pronamic_framework' ) ,
 		)
 	);
@@ -25,8 +25,8 @@ add_action( 'admin_enqueue_scripts', 'pronamic_media_select_scripts' );
 
 function pronamic_attachment_fields_to_edit($form_fields, $post) {
 	$field = sprintf(
-		'<a class="button pronamic-media-select-button" data-post_id="%s">%s</a>' , 
-		$post->ID , 
+		'<a class="button pronamic-media-select-button" data-post_id="%s">%s</a>' ,
+		$post->ID ,
 		__( 'Select', 'pronamic_framework')
 	);
 
@@ -54,7 +54,7 @@ function pronamic_media_select_field( $name, $value ) {
 	</div>
 
 	<input id="<?php echo esc_attr( $name ); ?>" name="<?php echo esc_attr( $name ); ?>" type="text" value="<?php echo esc_attr( $value ); ?>" class="pronamic-media-select" />
-	<?php 
+	<?php
 }
 
 function pronamic_media_select_preview( $id ) {
@@ -65,7 +65,7 @@ function pronamic_media_select_preview( $id ) {
 			$attachment_url = wp_get_attachment_url( $id );
 			$filetype_check = wp_check_filetype( $attachment_url );
 			$filetype_parts = explode( '/', $filetype_check['type'] );
-	
+
 			return '<a href="' . wp_get_attachment_url( $id ) . '" style="display: block; min-height:32px; padding: 10px 0 0 38px; background: url(' . plugins_url( "img/icon-" . $filetype_parts[1] . ".png", __FILE__ ) . ') no-repeat; font-size: 13px; font-weight: bold;">' . basename( $attachment_url ) . '</a>';
 		}
 	}
