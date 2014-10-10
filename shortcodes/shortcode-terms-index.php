@@ -6,7 +6,7 @@
 function pronamic_framework_shortcode_terms_index( $atts ) {
 	extract( shortcode_atts( array(
 		'taxonomy' => null,
-		'parent'   => 0
+		'parent'   => 0,
 	), $atts ) );
 
 	$result = '';
@@ -18,11 +18,11 @@ function pronamic_framework_shortcode_terms_index( $atts ) {
 		foreach ( $terms as $term ) {
 			$letter = strtoupper( substr( $term->name, 0, 1 ) );
 
-			if ( ! isset( $alphabet[$letter] ) ) {
-				$alphabet[$letter] = array();
+			if ( ! isset( $alphabet[ $letter ] ) ) {
+				$alphabet[ $letter ] = array();
 			}
 
-			$alphabet[$letter][] = $term;
+			$alphabet[ $letter ][] = $term;
 		}
 
 		if ( ! empty( $alphabet ) ) {
