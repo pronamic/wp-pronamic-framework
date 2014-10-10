@@ -3,6 +3,7 @@
 	<rule ref="WordPress">
 		<exclude name="WordPress.VIP.RestrictedFunctions.extract" />
 		<exclude name="WordPress.VIP.RestrictedFunctions.file_get_contents" />
+		<exclude name="WordPress.VIP.PostsPerPage.posts_per_page" />
 		<exclude name="WordPress.WhiteSpace.ScopeIndent.Incorrect" />
 	</rule>
 </ruleset>
