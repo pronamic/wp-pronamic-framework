@@ -108,79 +108,84 @@ WordPress installation and then activate the Plugin from Plugins page.
 
 == Changelog ==
 
+= 1.4.7 =
+*	Removed frontent style.css file.
+*	Fixed JavaScript issue in AJAX success event.
+*	WordPress Coding Standards optimizations.
+
 = 1.4.6 =
-*	Added before comment form text option
+*	Added before comment form text option.
 
 = 1.4.5 =
-*	Fixed issue with WPML and Pronamic Block widget
+*	Fixed issue with WPML and Pronamic Block widget.
 
 = 1.4.4 =
 *	Added shortcode for an terms index.
-*	Improved Pronamic Block widget for WPML
+*	Improved Pronamic Block widget for WPML.
 
 = 1.4.3 =
-*	Added field for custom head HTML
-*	Added field for custom footer HTML
-*	Added fields for post typ descriptions (can be used on archive page)
+*	Added field for custom head HTML.
+*	Added field for custom footer HTML.
+*	Added fields for post typ descriptions (can be used on archive page).
 
 = 1.4.2 =
-*	Fix logout page if no logout page is selected
-*	Added translations for the logout page
+*	Fix logout page if no logout page is selected.
+*	Added translations for the logout page.
 
 = 1.4.1 =
-*	Changed the user image template function, now by default use the author ID instead of logged in user ID
-*	Added logout page support
+*	Changed the user image template function, now by default use the author ID instead of logged in user ID.
+*	Added logout page support.
 
 = 1.4 =
-*	Improved default template for the edit post form shortcode
-*	Improved the query to retrieve the post to edit in the edit post form shortcode
-*	Added media select
-*	Added user image
-*	Fixed login form shortcode redirect_to parameter
+*	Improved default template for the edit post form shortcode.
+*	Improved the query to retrieve the post to edit in the edit post form shortcode.
+*	Added media select.
+*	Added user image.
+*	Fixed login form shortcode redirect_to parameter.
 
 = 1.3.3 =
-*	Removed the use of class constant in translation function, now use normal strings
-*	Changed the text domain name from 'pronamic-framework' to 'pronamic_framework'
-*	Improved the custom post type 'pronamic_block' WordPress admin menu icon
-*	Added the [pronamic_login_form]  shortcode
-*	Added the [pronamic_current_user_posts] shortcode
-*	Added the [pronamic_lostpassword_form]  shortcode
-*	Added Pronamic settings page to set some pages
+*	Removed the use of class constant in translation function, now use normal strings.
+*	Changed the text domain name from 'pronamic-framework' to 'pronamic_framework'.
+*	Improved the custom post type 'pronamic_block' WordPress admin menu icon.
+*	Added the [pronamic_login_form]  shortcode.
+*	Added the [pronamic_current_user_posts] shortcode.
+*	Added the [pronamic_lostpassword_form]  shortcode.
+*	Added Pronamic settings page to set some pages.
 
 = 1.3.2 =
-*	Removed admin menu item 'Pronamic'
-*	Removed HTTP header 'X-Powered-By' => 'Pronamic | pronamic.nl | info@pronamic.nl'
-*	Removed credit funtions
-*	Removed admin footer function
-*	Removed Pronamic admin dashboard widget
+*	Removed admin menu item 'Pronamic'.
+*	Removed HTTP header 'X-Powered-By' => 'Pronamic | pronamic.nl | info@pronamic.nl'.
+*	Removed credit funtions.
+*	Removed admin footer function.
+*	Removed Pronamic admin dashboard widget.
 
 = 1.3.1 =
-*	Removed comments support from the custom post type 'pronamic_block'
-*	Fixed the link to CSS file style.css in the enqueue style function call
+*	Removed comments support from the custom post type 'pronamic_block'.
+*	Fixed the link to CSS file style.css in the enqueue style function call.
 
 = 1.3 =
-*	Removed the "developer" and "developer-website" meta elements, they are not on the HTML5 whitelist
-*	Fixed an issue with the classes in multiple files and the plugin paths
-*	Added widget for Pronamic block post types
+*	Removed the "developer" and "developer-website" meta elements, they are not on the HTML5 whitelist.
+*	Fixed an issue with the classes in multiple files and the plugin paths.
+*	Added widget for Pronamic block post types.
 
 = 1.2 =
-*	Added custom post type "pronamic_block"
+*	Added custom post type "pronamic_block".
 
 = 1.1.2 =
-*	Added esc_attr() function to some code
+*	Added esc_attr() function to some code.
 
 = 1.1.1 =
-*	Fixed a bug with an unclosed span element
+*	Fixed a bug with an unclosed span element.
 
 = 1.1 =
-*	Added dashboard widget
-*	Added multilanguage support (English and Dutch)
-*	Added admin bar menu links
-*	Added "pronamic_credits" action
-*	Added "X-Powered-By" header
+*	Added dashboard widget.
+*	Added multilanguage support (English and Dutch).
+*	Added admin bar menu links.
+*	Added "pronamic_credits" action.
+*	Added "X-Powered-By" header.
 
 = 1.0 =
-*	Initial release
+*	Initial release.
 
 
 == ToDo ==
