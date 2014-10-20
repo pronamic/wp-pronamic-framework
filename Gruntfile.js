@@ -42,7 +42,18 @@ module.exports = function( grunt ) {
 				rulesets: 'phpmd.ruleset.xml'
 			}
 		},
-		
+	
+		// Make POT
+		makepot: {
+			target: {
+				options: {
+					cwd: '',
+					domainPath: 'languages',
+					type: 'wp-plugin',
+					exclude: [ 'deploy/.*', 'wp-svn/.*' ],
+				}
+			}
+		},
 
 		// Copy
 		copy: {
@@ -89,9 +100,11 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-phplint' );
 	grunt.loadNpmTasks( 'grunt-phpmd' );
 	grunt.loadNpmTasks( 'grunt-rt-wp-deploy' );
+	grunt.loadNpmTasks( 'grunt-wp-i18n' );
 
 	// Default task(s).
 	grunt.registerTask( 'default', [ 'jshint', 'phplint', 'phpmd', 'phpcs' ] );
+	grunt.registerTask( 'pot', [ 'makepot' ] );
 
 	grunt.registerTask( 'deploy', [
 		'default',

@@ -3,11 +3,19 @@
 Plugin Name: Pronamic Framework
 Plugin URI: http://pronamic.eu/wordpress/framework/
 Description: This plugin contains some handy WordPress functions and extends the WordPress admin interface with some nice functions, widgets and more.
+
 Version: 1.4.6
 Requires at least: 3.0
+
 Author: Pronamic
 Author URI: http://pronamic.eu/
+
+Text Domain: pronamic_framework
+Domain Path: /languages/
+
 License: GPL
+
+GitHub URI: https://github.com/pronamic/wp-pronamic-ideal
 */
 
 require_once 'classes/Pronamic_Block_Widget.php';
