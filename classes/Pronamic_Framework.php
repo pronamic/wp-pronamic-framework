@@ -32,15 +32,13 @@ class Pronamic_Framework {
 		// Actions
 		add_action( 'init',       array( __CLASS__, 'init' ) );
 
-		add_action( 'wp_head',    array( __CLASS__ , 'wp_head' ) );
-		add_action( 'wp_footer',  array( __CLASS__ , 'wp_footer'  ) );
+		add_action( 'wp_head',    array( __CLASS__, 'wp_head' ) );
+		add_action( 'wp_footer',  array( __CLASS__, 'wp_footer'  ) );
 
 		add_action( 'admin_init', array( __CLASS__, 'admin_init' ) );
 		add_action( 'admin_menu', array( __CLASS__, 'admin_menu' ) );
 
 		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'admin_enqueue_scripts' ) );
-
-		add_action( 'wp_print_styles',   array( __CLASS__, 'print_styles' ) );
 
 		add_action( 'widgets_init',      array( __CLASS__, 'widgets_init' ) );
 
@@ -138,7 +136,7 @@ class Pronamic_Framework {
 			'pronamic_framework_pages', // section
 			array( // args
 				'description' => sprintf( __( 'Default is <code>%s</code>', 'pronamic_framework' ), __( 'post', 'pronamic_framework' ) ),
-				'label_for'   => 'pronamic_framework_edit_post_id_key'
+				'label_for'   => 'pronamic_framework_edit_post_id_key',
 			)
 		);
 
@@ -378,13 +376,6 @@ class Pronamic_Framework {
 	public static function admin_enqueue_scripts() {
 		// This stylesheet is required on all admin pages because of the admin menu icon
 		wp_enqueue_style( 'pronamic_framework', plugins_url( '/assets/css/admin.css', self::$file ) );
-	}
-
-	/**
-	 * Print the styles
-	 */
-	public static function print_styles() {
-		wp_enqueue_style( 'pronamic_framework' , plugins_url( '/style.css', self::$file ) );
 	}
 
 	////////////////////////////////////////////////////////////

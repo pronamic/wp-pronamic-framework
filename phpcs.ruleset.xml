@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ruleset name="Pronamic Framework plugin rules">
+	<rule ref="WordPress">
+		<exclude name="WordPress.Files.FileName" />
+		<exclude name="WordPress.VIP.RestrictedFunctions.extract" />
+		<exclude name="WordPress.VIP.RestrictedFunctions.file_get_contents" />
+		<exclude name="WordPress.VIP.RestrictedFunctions.user_meta" />
+		<exclude name="WordPress.VIP.PostsPerPage.posts_per_page" />
+		<exclude name="WordPress.WhiteSpace.ScopeIndent.Incorrect" />
+		<exclude name="WordPress.XSS.EscapeOutput." />
+	</rule>
+</ruleset>

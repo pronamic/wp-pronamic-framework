@@ -1,5 +1,5 @@
-<?php if ( have_posts() ): ?>
-	
+<?php if ( have_posts() ) : ?>
+
 	<table>
 		<thead>
 			<tr>
@@ -14,11 +14,11 @@
 				</th>
 			</tr>
 		</thead>
-	
+
 		<tbody>
-	
-			<?php while ( have_posts() ): the_post(); ?>
-		
+
+			<?php while ( have_posts() ) : the_post(); ?>
+
 				<tr>
 					<td>
 						<a href="<?php the_permalink(); ?>">
@@ -33,14 +33,14 @@
 						<?php delete_post_link(); ?>
 					</td>
 				</tr>
-	
+
 			<?php endwhile; ?>
-	
+
 		</tbody>
 	</table>
 
-<?php else: ?>
+<?php else : ?>
 
-	
+
 
 <?php endif; ?>
