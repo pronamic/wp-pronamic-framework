@@ -42,13 +42,65 @@ module.exports = function( grunt ) {
 				rulesets: 'phpmd.ruleset.xml'
 			}
 		},
+		
+
+		// Copy
+		copy: {
+			deploy: {
+				src: [
+					'**',
+					'!Gruntfile.js',
+					'!package.json',
+					'!phpcs.ruleset.xml',
+					'!phpmd.ruleset.xml',
+					'!node_modules/**',
+					'!wp-svn/**'
+				],
+				dest: 'deploy',
+				expand: true
+			},
+		},
+
+		// Clean
+		clean: {
+			deploy: {
+				src: [ 'deploy' ]
+			},
+		},
+
+		// WordPress deploy
+		rt_wp_deploy: {
+			app: {
+				options: {
+					svnUrl: 'http://plugins.svn.wordpress.org/pronamic-framework/',
+					svnDir: 'wp-svn',
+					svnUsername: 'pronamic',
+					deployDir: 'deploy',
+					version: '<%= pkg.version %>',
+				}
+			}
+		},
 	} );
 
+	grunt.loadNpmTasks( 'grunt-contrib-clean' );
+	grunt.loadNpmTasks( 'grunt-contrib-copy' );
 	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 	grunt.loadNpmTasks( 'grunt-phpcs' );
 	grunt.loadNpmTasks( 'grunt-phplint' );
 	grunt.loadNpmTasks( 'grunt-phpmd' );
+	grunt.loadNpmTasks( 'grunt-rt-wp-deploy' );
 
 	// Default task(s).
 	grunt.registerTask( 'default', [ 'jshint', 'phplint', 'phpmd', 'phpcs' ] );
+
+	grunt.registerTask( 'deploy', [
+		'default',
+		'clean:deploy',
+		'copy:deploy'
+	] );
+	
+	grunt.registerTask( 'wp-deploy', [
+		'deploy',
+		'rt_wp_deploy'
+	] );
 };
