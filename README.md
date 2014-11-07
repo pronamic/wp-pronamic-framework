@@ -42,18 +42,28 @@
 
 *	**Get user image**
 
-		pronamic_get_the_user_image( $user_id = null, $size = 'post-thumbnail', $attr = '' )
+```php
+pronamic_get_the_user_image( $user_id = null, $size = 'post-thumbnail', $attr = '' )
+```
+
+*	**Get post type archive description**
+
+
 
 *	**How to use?**
 
-		$author = ( get_query_var( 'author_name' ) ) ? get_user_by( 'slug', get_query_var( 'author_name' ) ) : get_userdata( get_query_var( 'author' ) );
+```
+<?php
 
-		if ( function_exists( 'pronamic_get_the_user_image' ) ) {
-			echo pronamic_get_the_user_image( $author->ID, array( 93, 140 ) );
-		} else {
-			echo get_avatar( get_the_author_meta( 'user_email', $author->ID ), apply_filters( 'pronamic_author_bio_avatar_size', 90 ) );
-		}
+$author = ( get_query_var( 'author_name' ) ) ? get_user_by( 'slug', get_query_var( 'author_name' ) ) : get_userdata( get_query_var( 'author' ) );
 
+if ( function_exists( 'pronamic_get_the_user_image' ) ) {
+	echo pronamic_get_the_user_image( $author->ID, array( 93, 140 ) );
+} else {
+	echo get_avatar( get_the_author_meta( 'user_email', $author->ID ), apply_filters( 'pronamic_author_bio_avatar_size', 90 ) );
+}
+
+```
 
 ## Query to display block
 
