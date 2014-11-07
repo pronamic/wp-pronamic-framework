@@ -30,31 +30,37 @@
 
 *	**Has user image**
 
-		pronamic_has_user_image( $user_id = null )
+```php
+pronamic_has_user_image( $user_id = null )
+```
 
 *	**Get user image ID**
 
-		pronamic_get_user_image_id( $user_id = null )
+```php
+pronamic_get_user_image_id( $user_id = null )
+```
 
 *	**The user image**
 
-		pronamic_the_user_image( $size = 'post-thumbnail', $attr = '')
+```php
+pronamic_the_user_image( $size = 'post-thumbnail', $attr = '' );
+```
 
 *	**Get user image**
 
 ```php
-pronamic_get_the_user_image( $user_id = null, $size = 'post-thumbnail', $attr = '' )
+pronamic_get_the_user_image( $user_id = null, $size = 'post-thumbnail', $attr = '' );
 ```
 
 *	**Get post type archive description**
 
-
+```php
+get_option( 'pronamic_framework_post_type_description_' . $post_type );
+```
 
 *	**How to use?**
 
-```
-<?php
-
+```php
 $author = ( get_query_var( 'author_name' ) ) ? get_user_by( 'slug', get_query_var( 'author_name' ) ) : get_userdata( get_query_var( 'author' ) );
 
 if ( function_exists( 'pronamic_get_the_user_image' ) ) {
@@ -62,23 +68,20 @@ if ( function_exists( 'pronamic_get_the_user_image' ) ) {
 } else {
 	echo get_avatar( get_the_author_meta( 'user_email', $author->ID ), apply_filters( 'pronamic_author_bio_avatar_size', 90 ) );
 }
-
 ```
 
 ## Query to display block
 
-	<?php
+```php
+$query = new WP_Query( array( 
+	'post_type' => 'pronamic_block', 
+	'name'      => 'contact',
+) );
 
-	$query = new WP_Query( array( 
-		'post_type' => 'pronamic_block', 
-		'name'      => 'contact',
-	) );
-
-	while( $query->have_posts() ) { $query->the_post();
-		the_content();
-	}
-
-	?>
+while( $query->have_posts() ) { $query->the_post();
+	the_content();
+}
+```
 
 ## Template Hierarchy Pronamic Block Widget
 
