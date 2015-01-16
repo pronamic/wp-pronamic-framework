@@ -104,6 +104,11 @@ function pronamic_framework_login_form( $args = '' ) {
 			$redirect_to = $value;
 		}
 
+		$value = filter_input( INPUT_SERVER, 'HTTP_REFERER', FILTER_SANITIZE_STRING );
+		if ( $redirect_to == 'referer' && !empty($value) ) {
+			$redirect_to = $value;
+		}
+
 		$output .= '		<input type="hidden" name="redirect_to" value="' . esc_attr( $redirect_to ) . '" />';
 		$output .= '		<input type="hidden" name="action" value="log-in" />';
 		$output .= '		<input type="submit" name="submit" class="submit button" value="' . esc_attr__( 'Log in', 'pronamic_framework' ) . '" />';
