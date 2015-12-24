@@ -366,7 +366,7 @@ class Pronamic_Framework {
 			'has_archive'        => false,
 			'hierarchical'       => true,
 			'menu_position'      => null,
-			// 'menu_icon' =>  plugins_url('/admin/icons/block.png', self::$file) ,
+			'menu_icon'          => 'dashicons-grid-view',
 			'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' )
 		) );
 	}
