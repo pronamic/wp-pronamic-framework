@@ -143,7 +143,7 @@ module.exports = function( grunt ) {
 		rt_wp_deploy: {
 			app: {
 				options: {
-					svnUrl: 'http://plugins.svn.wordpress.org/pronamic-framework/',
+					svnUrl: 'http://plugins.svn.wordpress.org/<%= pkg.name %>/',
 					svnDir: 'deploy/wp-svn',
 					svnUsername: 'pronamic',
 					deployDir: 'deploy/latest',
