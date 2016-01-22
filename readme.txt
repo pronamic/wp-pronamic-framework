@@ -1,10 +1,10 @@
 === Pronamic Framework ===
 Contributors: pronamic, remcotolsma 
 Tags: pronamic, framework
-Donate link: http://pronamic.eu/donate/?for=wp-plugin-pronamic-framework&source=wp-plugin-readme-txt
+Donate link: http://www.pronamic.eu/donate/?for=wp-plugin-pronamic-framework&source=wp-plugin-readme-txt
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 1.4.6
+Stable tag: 1.4.7
 
 This plugin contains some handy WordPress functions and extends the WordPress admin 
 interface with some nice functions, widgets and more.
@@ -109,6 +109,9 @@ WordPress installation and then activate the Plugin from Plugins page.
 == Changelog ==
 
 = 1.4.7 =
+*	Fixed admin menu icon.
+*	Added redirect_to = referer option.
+*	Removed usage of deprecated screen_icon() function.
 *	Removed frontent style.css file.
 *	Fixed JavaScript issue in AJAX success event.
 *	WordPress Coding Standards optimizations.

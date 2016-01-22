@@ -61,7 +61,7 @@ class Pronamic_Block_Widget extends WP_Widget {
 							$query->the_post();
 
 							$extra = '';
-							if ( get_the_ID() == $post_id ) {
+							if ( get_the_ID() === $post_id ) {
 								$extra = 'selected="selected"';
 							}
 

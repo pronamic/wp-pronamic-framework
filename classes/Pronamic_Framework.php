@@ -33,7 +33,7 @@ class Pronamic_Framework {
 		add_action( 'init',       array( __CLASS__, 'init' ) );
 
 		add_action( 'wp_head',    array( __CLASS__, 'wp_head' ) );
-		add_action( 'wp_footer',  array( __CLASS__, 'wp_footer'  ) );
+		add_action( 'wp_footer',  array( __CLASS__, 'wp_footer' ) );
 
 		add_action( 'admin_init', array( __CLASS__, 'admin_init' ) );
 		add_action( 'admin_menu', array( __CLASS__, 'admin_menu' ) );
@@ -287,7 +287,7 @@ class Pronamic_Framework {
 		wp_dropdown_pages( array(
 			'name'             => $name,
 			'selected'         => get_option( $name, '' ),
-			'show_option_none' => __( '&mdash; Select a page &mdash;', 'pronamic_framework' )
+			'show_option_none' => __( '&mdash; Select a page &mdash;', 'pronamic_framework' ),
 		) );
 	}
 
@@ -313,7 +313,7 @@ class Pronamic_Framework {
 			__( 'Pronamic', 'pronamic_framework' ) , // menu_title
 			'manage_options' , // capability
 			'pronamic_framework' , // menu_slug
-			array( __CLASS__, 'options_page' ) // function
+			array( __CLASS__, 'options_page' )
 		);
 	}
 
@@ -367,7 +367,7 @@ class Pronamic_Framework {
 			'hierarchical'       => true,
 			'menu_position'      => null,
 			'menu_icon'          => 'dashicons-grid-view',
-			'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' )
+			'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' ),
 		) );
 	}
 

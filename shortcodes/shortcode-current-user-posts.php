@@ -11,7 +11,7 @@ function pronamic_framework_current_user_posts( $atts, $content = null ) {
 
 	if ( is_user_logged_in() ) {
 		extract( shortcode_atts( array(
-			'query' => array()
+			'query' => array(),
 		), $atts ) );
 
 		$user = wp_get_current_user();

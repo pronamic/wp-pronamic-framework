@@ -1,14 +1,14 @@
 <?php
 /*
 Plugin Name: Pronamic Framework
-Plugin URI: http://pronamic.eu/wordpress/framework/
+Plugin URI: http://www.pronamic.eu/plugins/pronamic-framework/
 Description: This plugin contains some handy WordPress functions and extends the WordPress admin interface with some nice functions, widgets and more.
 
-Version: 1.4.6
+Version: 1.4.7
 Requires at least: 3.0
 
 Author: Pronamic
-Author URI: http://pronamic.eu/
+Author URI: http://www.pronamic.eu/
 
 Text Domain: pronamic_framework
 Domain Path: /languages/

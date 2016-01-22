@@ -1,6 +1,6 @@
 {
   "name": "wp-pronamic-framework",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "description": "This plugin contains some handy WordPress functions and extends the WordPress admin interface with some nice functions, widgets and more.",
   "repository": {
     "type": "git",
@@ -14,21 +14,22 @@
     "plugin"
   ],
   "author": "Pronamic",
-  "license": "GPL",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/pronamic/wp-pronamic-framework/issues"
   },
   "homepage": "https://github.com/pronamic/wp-pronamic-framework",
   "devDependencies": {
     "grunt": "^0.4.5",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-copy": "^0.7.0",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-phpcs": "^0.2.3",
-    "grunt-phplint": "0.0.5",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-jshint": "^0.12.0",
+    "grunt-phpcs": "^0.4.0",
+    "grunt-phplint": "0.0.8",
     "grunt-phpmd": "^0.1.1",
-    "grunt-phpunit": "^0.3.5",
+    "grunt-phpunit": "^0.3.6",
     "grunt-rt-wp-deploy": "^0.1.0",
-    "grunt-wp-i18n": "~0.4.9"
+    "grunt-wp-i18n": "~0.5.3",
+    "load-grunt-tasks": "^3.4.0"
   }
 }

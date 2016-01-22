@@ -1,18 +1,18 @@
-# Copyright (C) 2014 Pronamic
+# Copyright (C) 2016 Pronamic
 # This file is distributed under the GPL.
 msgid ""
 msgstr ""
-"Project-Id-Version: Pronamic Framework 1.4.6\n"
+"Project-Id-Version: Pronamic Framework 1.4.7\n"
 "Report-Msgid-Bugs-To: "
-"http://wordpress.org/support/plugin/pronamic-framework\n"
-"POT-Creation-Date: 2014-10-20 09:17:41+00:00\n"
+"https://wordpress.org/support/plugin/pronamic-framework\n"
+"POT-Creation-Date: 2016-01-22 09:21:26+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Generator: grunt-wp-i18n 0.4.9\n"
+"X-Generator: grunt-wp-i18n 0.5.3\n"
 
 #. Author of the plugin/theme
 msgid "Pronamic"
@@ -30,100 +30,100 @@ msgstr ""
 msgid "Block:"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:90
+#: classes/Pronamic_Framework.php:93
 msgid "Pages"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:97
+#: classes/Pronamic_Framework.php:100
 msgid "Login Page"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:106
+#: classes/Pronamic_Framework.php:109
 msgid "Logout Page"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:115
+#: classes/Pronamic_Framework.php:118
 msgid "Lost Password Page"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:124
+#: classes/Pronamic_Framework.php:127
 msgid "Edit Post Page"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:133
+#: classes/Pronamic_Framework.php:136
 msgid "Edit Post ID Key"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:138
+#: classes/Pronamic_Framework.php:141
 msgid "Default is <code>%s</code>"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:138
+#: classes/Pronamic_Framework.php:141
 #: shortcodes/shortcode-current-user-posts.php:87
 msgid "post"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:146
+#: classes/Pronamic_Framework.php:149
 msgid "Comment Form"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:153
+#: classes/Pronamic_Framework.php:156
 msgid "Before comment form text"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:163
+#: classes/Pronamic_Framework.php:166
 msgid "HTML"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:170
+#: classes/Pronamic_Framework.php:173
 msgid "Head"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:179
+#: classes/Pronamic_Framework.php:182
 msgid "Footer"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:192
+#: classes/Pronamic_Framework.php:195
 msgid "Post Type Descriptions"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:287 includes/settings-fields.php:157
+#: classes/Pronamic_Framework.php:290
 msgid "&mdash; Select a page &mdash;"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:346
+#: classes/Pronamic_Framework.php:349
 msgid "Add New Block"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:347
+#: classes/Pronamic_Framework.php:350
 msgid "Edit Block"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:348
+#: classes/Pronamic_Framework.php:351
 msgid "New Block"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:349
+#: classes/Pronamic_Framework.php:352
 msgid "View Block"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:350
+#: classes/Pronamic_Framework.php:353
 msgid "Search Blocks"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:351
+#: classes/Pronamic_Framework.php:354
 msgid "No blocks found"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:352
+#: classes/Pronamic_Framework.php:355
 msgid "No blocks found in Trash"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:353
+#: classes/Pronamic_Framework.php:356
 msgid "Parent Block:"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:354
+#: classes/Pronamic_Framework.php:357
 msgid "Blocks"
 msgstr ""
 
@@ -160,12 +160,16 @@ msgstr ""
 msgid "Select Media"
 msgstr ""
 
+#: includes/settings-fields.php:157
+msgid "— Select a page —"
+msgstr ""
+
 #: includes/settings-fields.php:208
 msgid "You don't  have any Gravity Forms forms."
 msgstr ""
 
 #: includes/settings-fields.php:218
-msgid "&mdash; Select a form &mdash;"
+msgid "— Select a form —"
 msgstr ""
 
 #: shortcodes/shortcode-login-form.php:50
@@ -192,11 +196,11 @@ msgstr ""
 msgid "An unknown error has occurred."
 msgstr ""
 
-#: shortcodes/shortcode-login-form.php:109
+#: shortcodes/shortcode-login-form.php:114
 msgid "Log in"
 msgstr ""
 
-#: shortcodes/shortcode-login-form.php:113
+#: shortcodes/shortcode-login-form.php:118
 msgid "Remember me"
 msgstr ""
 
@@ -243,7 +247,7 @@ msgid "Pronamic Framework"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "http://pronamic.eu/wordpress/framework/"
+msgid "http://www.pronamic.eu/plugins/pronamic-framework/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -253,20 +257,20 @@ msgid ""
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://pronamic.eu/"
+msgid "http://www.pronamic.eu/"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:343
+#: classes/Pronamic_Framework.php:346
 msgctxt "post type general name"
 msgid "Blocks"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:344
+#: classes/Pronamic_Framework.php:347
 msgctxt "post type singular name"
 msgid "Block"
 msgstr ""
 
-#: classes/Pronamic_Framework.php:345
+#: classes/Pronamic_Framework.php:348
 msgctxt "block"
 msgid "Add New"
 msgstr ""
