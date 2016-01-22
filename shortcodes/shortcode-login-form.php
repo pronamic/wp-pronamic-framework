@@ -8,7 +8,7 @@ function pronamic_framework_maybe_login() {
 	global $pronamic_framework_error, $pronamic_framework_login_form_i;
 
 	// Maybe login
-	if ( filter_has_var( INPUT_POST, 'action' ) && 'log-in' == filter_input( INPUT_POST, 'action', FILTER_SANITIZE_STRING ) ) {
+	if ( filter_has_var( INPUT_POST, 'action' ) && 'log-in' === filter_input( INPUT_POST, 'action', FILTER_SANITIZE_STRING ) ) {
 		global $pronamic_framework_error;
 
 		$result = wp_signon();
@@ -60,7 +60,7 @@ function pronamic_framework_login_form( $args = '' ) {
 	} else { // Not logged in
 		global $pronamic_framework_error, $pronamic_framework_login_form_i;
 
-		if ( $pronamic_framework_login_form_i == null ) {
+		if ( null === $pronamic_framework_login_form_i ) {
 			$pronamic_framework_login_form_i = 1;
 		}
 
@@ -101,6 +101,11 @@ function pronamic_framework_login_form( $args = '' ) {
 
 		$value = filter_input( INPUT_GET, 'redirect_to', FILTER_SANITIZE_STRING );
 		if ( ! empty( $value ) ) {
+			$redirect_to = $value;
+		}
+
+		$value = filter_input( INPUT_SERVER, 'HTTP_REFERER', FILTER_SANITIZE_STRING );
+		if ( 'referer' === $redirect_to && ! empty( $value ) ) {
 			$redirect_to = $value;
 		}
 

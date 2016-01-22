@@ -5,13 +5,13 @@
  */
 function pronamic_framework_lostpassword_form( $args = '' ) {
 	$args = wp_parse_args( $args, array(
-		'redirect_to' => get_permalink()
+		'redirect_to' => get_permalink(),
 	) );
 
 	// Globals
 	global $pronamic_framework_lostpassword_form_i;
 
-	if ( $pronamic_framework_lostpassword_form_i == null ) {
+	if ( null === $pronamic_framework_lostpassword_form_i ) {
 		$pronamic_framework_lostpassword_form_i = 1;
 	}
 

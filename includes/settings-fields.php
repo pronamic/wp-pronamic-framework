@@ -154,7 +154,7 @@ if ( ! function_exists( 'pronamic_field_dropdown_pages' ) ) {
 		wp_dropdown_pages( array(
 			'name'             => $name,
 			'selected'         => get_option( $name, '' ),
-			'show_option_none' => __( '&mdash; Select a page &mdash;', 'pronamic_framework' )
+			'show_option_none' => __( '— Select a page —', 'pronamic_framework' ),
 		) );
 	}
 }
@@ -215,7 +215,7 @@ if ( ! function_exists( 'pronamic_field_dropdown_gravityforms' ) ) {
 				'<option value="%s" %s>%s</option>',
 				'',
 				selected( $form_id, '', false ),
-				__( '&mdash; Select a form &mdash;', 'pronamic_framework' )
+				__( '— Select a form —', 'pronamic_framework' )
 			);
 
 			foreach ( $forms as $form ) {

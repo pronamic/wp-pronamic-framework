@@ -68,12 +68,6 @@ function pronamic_framework_maybe_save_post() {
 
 		$result = wp_update_post( $post );
 
-		if ( 0 !== $result ) {
-
-		} else {
-
-		}
-
 		// Meta
 		$meta = filter_input( INPUT_POST, 'post_meta', FILTER_SANITIZE_STRING, FILTER_REQUIRE_ARRAY );
 
@@ -90,7 +84,7 @@ function pronamic_framework_maybe_save_post() {
 			$post_mime_types = get_post_mime_types();
 
 			foreach ( $_FILES['post_attachments']['error'] as $key => $error ) {
-				if ( UPLOAD_ERR_OK == $error ) { // no error
+				if ( UPLOAD_ERR_OK === $error ) { // no error
 					$tmp_name = $_FILES['post_attachments']['tmp_name'][ $key ];
 					$name     = $_FILES['post_attachments']['name'][ $key ];
 
@@ -117,7 +111,7 @@ function pronamic_framework_maybe_save_post() {
 
 						$updated = wp_update_attachment_metadata( $attachment_id, $meta_data );
 
-						if ( 'image' == $type ) {
+						if ( 'image' === $type ) {
 							update_post_meta( $post_ID, '_thumbnail_id', $attachment_id );
 						}
 					}

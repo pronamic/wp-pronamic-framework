@@ -33,7 +33,7 @@ class Pronamic_Framework {
 		add_action( 'init',       array( __CLASS__, 'init' ) );
 
 		add_action( 'wp_head',    array( __CLASS__, 'wp_head' ) );
-		add_action( 'wp_footer',  array( __CLASS__, 'wp_footer'  ) );
+		add_action( 'wp_footer',  array( __CLASS__, 'wp_footer' ) );
 
 		add_action( 'admin_init', array( __CLASS__, 'admin_init' ) );
 		add_action( 'admin_menu', array( __CLASS__, 'admin_menu' ) );
@@ -45,6 +45,9 @@ class Pronamic_Framework {
 		add_action( 'template_redirect', array( __CLASS__, 'maybe_logout' ) );
 
 		add_action( 'comment_form_before', array( __CLASS__, 'show_comment_form_before_text' ) );
+
+		// Filters
+		add_filter( 'login_url', array( __CLASS__, 'login_url' ), 10, 2 );
 	}
 
 	//////////////////////////////////////////////////
@@ -284,7 +287,7 @@ class Pronamic_Framework {
 		wp_dropdown_pages( array(
 			'name'             => $name,
 			'selected'         => get_option( $name, '' ),
-			'show_option_none' => __( '&mdash; Select a page &mdash;', 'pronamic_framework' )
+			'show_option_none' => __( '&mdash; Select a page &mdash;', 'pronamic_framework' ),
 		) );
 	}
 
@@ -310,7 +313,7 @@ class Pronamic_Framework {
 			__( 'Pronamic', 'pronamic_framework' ) , // menu_title
 			'manage_options' , // capability
 			'pronamic_framework' , // menu_slug
-			array( __CLASS__, 'options_page' ) // function
+			array( __CLASS__, 'options_page' )
 		);
 	}
 
@@ -363,8 +366,8 @@ class Pronamic_Framework {
 			'has_archive'        => false,
 			'hierarchical'       => true,
 			'menu_position'      => null,
-			// 'menu_icon' =>  plugins_url('/admin/icons/block.png', self::$file) ,
-			'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' )
+			'menu_icon'          => 'dashicons-grid-view',
+			'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' ),
 		) );
 	}
 
@@ -408,5 +411,36 @@ class Pronamic_Framework {
 	 */
 	public static function show_comment_form_before_text() {
 		echo get_option( 'pronamic_framework_comment_form_before_text', '' );
+	}
+
+	//////////////////////////////////////////////////
+
+	/**
+	 * Login URL
+	 *
+	 * @param string $login_url
+	 * @param boolean $redirect
+	 * @return string
+	 */
+	public static function login_url( $login_url, $redirect ) {
+		$login_page_id = get_option( 'pronamic_framework_login_page_id' );
+
+		if ( empty( $login_page_id ) ) {
+			return $login_url;
+		}
+
+		$permalink = get_permalink( $login_page_id );
+
+		if ( empty( $permalink ) ) {
+			return $login_url;
+		}
+
+		$login_url = $permalink;
+
+		if ( ! empty( $redirect ) ) {
+			$login_url = add_query_arg( 'redirect_to', urlencode( $redirect ), $login_url );
+		}
+
+		return $login_url;
 	}
 }
