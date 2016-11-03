@@ -32,7 +32,7 @@ class Pronamic_Block_Widget extends WP_Widget {
 
 		$post_id = null;
 		if ( isset( $instance['post_id'] ) ) {
-			$post_id = intval( $instance['post_id'] );
+			$post_id = $instance['post_id'];
 		}
 
 		?>
