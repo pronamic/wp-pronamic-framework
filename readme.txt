@@ -1,4 +1,4 @@
-=== Pronamic Framework ===
+=== [DEPRECATED] Pronamic Framework ===
 Contributors: pronamic, remcotolsma 
 Tags: pronamic, framework, deprecated
 Donate link: http://www.pronamic.eu/donate/?for=wp-plugin-pronamic-framework&source=wp-plugin-readme-txt
