@@ -1,6 +1,6 @@
 === Pronamic Framework ===
 Contributors: pronamic, remcotolsma 
-Tags: pronamic, framework
+Tags: pronamic, framework, deprecated
 Donate link: http://www.pronamic.eu/donate/?for=wp-plugin-pronamic-framework&source=wp-plugin-readme-txt
 Requires at least: 3.0
 Tested up to: 4.0
@@ -11,6 +11,8 @@ interface with some nice functions, widgets and more.
 
 
 == Description ==
+
+> Pronamic wil **no longer support and maintain** this plugin.
 
 = Shortcodes =
 

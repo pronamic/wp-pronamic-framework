@@ -1,3 +1,5 @@
+# [DEPRECATED] Pronamic Framework
+
 ## Shortcodes
 
 *	**Login form**

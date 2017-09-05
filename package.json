@@ -11,7 +11,8 @@
     "framework",
     "wordpress",
     "wp",
-    "plugin"
+    "plugin",
+    "deprecated"
   ],
   "author": "Pronamic",
   "license": "GPL-3.0",
